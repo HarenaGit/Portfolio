@@ -9,6 +9,8 @@ var navActive = (section) => {
 
 };
 
+
+
 var navigationSection = () => {
 
     var $section = $('section[data-section]');

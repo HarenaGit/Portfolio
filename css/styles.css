@@ -513,7 +513,6 @@ header{
     background: #D6974C;
     border-radius: 3px;
     position: relative;
-    animation: fillBars 2.5s 1;
 }
 
 .skill-per::before{

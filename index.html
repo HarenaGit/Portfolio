@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ny Harena</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     
 </head>
 <body>
@@ -107,7 +108,7 @@
         <div id="header" data-aos="fade-right">
             <h2>Réalisation</h2>
         </div>
-        <div class="text-zone-2"  >
+        <div class="text-zone-2"  data-aos="fade-right" >
             <div>
                 <p>Une petite gallerie d'images des projets récents que j'ai choisi d'illustrer.
                     Je les ai tous réalisé en  modifiant des templates ou en crééant un si je n'en trouve pas adapter aux problèmes. 
@@ -127,11 +128,11 @@
                 </div>
             </a>
         </div>
-        <div class="fake-big-2"  >Travaux</div>
+        <div class="fake-big-2" data-aos="fade-left"  >Travaux</div>
     </section>
 
 
-    <div id="home-magicwall" class="fake-magicwall">
+    <div id="home-magicwall" class="fake-magicwall" data-aos="fade-up" >
         <ul>
             <li>
                 <div class="magic-wall_item lazyload" id="modal1">
@@ -177,8 +178,8 @@
 
     <section id="section-about" data-section="section-about" >
 
-        <div class="text-zone3">
-            <div id="header">
+        <div class="text-zone3" data-aos="fade-right" >
+            <div id="header" >
                 <h2>A propos de moi</h2>
             </div>
 
@@ -224,7 +225,7 @@
 
 
         
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way">
+    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
 
         <div class="fake-big-2">Activités</div>
     
@@ -303,7 +304,7 @@
 
     <section id="section-skills" data-section="section-skills" >
 
-        <div class="text-zone2">
+        <div class="text-zone2" data-aos="fade-right" >
             <div id="header">
                 <h2>Compétences</h2>
             </div>
@@ -314,7 +315,7 @@
             
         </div>
     </section>
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way">
+    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
 
         <div class="fake-big-2">.......</div>
     
@@ -326,7 +327,7 @@
                     <time class="post-date" style="color: #D6974C;">Web</time>
                     <br>
                     <br><br>
-                    <div class="skills">
+                    <div class="skills" data-progress="animate" >
                         <div class="skill">
                              <div class="skill-name">HTML</div>
                              <div class="skill-bar">
@@ -354,7 +355,7 @@
         </div>
     </section>
 
-    <section id="section-cv" data-section="section-cv" >
+    <section id="section-cv" data-section="section-cv" data-aos="fade-right" >
 
         <div class="text-zone2">
             <div id="header">
@@ -368,7 +369,7 @@
         </div>
     </section>
 
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way">
+    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
 
         <div class="fake-big-2">........</div>
     
@@ -389,7 +390,7 @@
                     <br>
                     <br><br>
                     <object data="./doc/cv.pdf" type="application/pdf" width="100%" height="500px">
-                        <p class="error">Votre Navigateur n'a pas de plugin PDF</p>
+                        <p class="error">Votre Navigateur n'a pas de plugin PDF. Dommage :(</p>
                     </object>
                    
                 </div>
@@ -397,16 +398,20 @@
     
         </div>
     </section>
-    
+    <script src="./js/aos.js"></script>
+  
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery.tagcanvas.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/link.js"></script>
+    <script src="./js/progressBar.js"></script>
     <script>
+      
         document.addEventListener('DOMContentLoaded', (event) => {
             canvasInit();
+            AOS.init();
         });
     </script>
     
