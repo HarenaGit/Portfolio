@@ -16,7 +16,7 @@ var animate = () => {
 
 var animateProgressBar = () => {
 
-    var $div = $('div[data-progress]');
+    var $div = $('section[data-progress]');
    
     $div.waypoint(function(direction) {
         // && $div === 'animate'

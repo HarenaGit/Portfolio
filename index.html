@@ -71,7 +71,7 @@
     <section id="section-home" data-section="section-home" class="section-home">
         <div class="text-zone">
             <h1><span class="bottom anime-text" >Je</span>  <br>
-                <span class="bottom" >Suis Ny Harena</span> <br>  <span>Développeur Junior</span>
+                <span class="bottom" >Suis Ny Harena,</span> <br>  <span>Développeur Junior</span>
             </h1>
 
             <p class="gray-text">Spécialisé en développement Web (Full-stack).</p>
@@ -135,10 +135,13 @@
     <div id="home-magicwall" class="fake-magicwall" data-aos="fade-up" >
         <ul>
             <li>
-                <div class="magic-wall_item lazyload" id="modal1">
-                    <img src="images/Bez-nazwy-3.jpg" alt="image">
+                <div class="magic-wall_item lazyload" data-item="test" id="modal1">
+                    <img src="images/2-scaled.jpg" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#" class="colorbox"></a>
+                    <a href="#" data-img="images/2-scaled.jpg;images/Bez-nazwy-3.jpg" data-title="Template Android Java" 
+                    data-content="Un peu de bla bla bla" data-sub-title="Mots clés" data-badge="LARAVEL/#fb503d, REACT.js/#61dbfb, Firebase/#ffcb2b"  
+                    onclick="event.preventDefault();" class="colorbox">
+                    </a>
                 </div>
             </li>
             <!-- magic wall 1 -->
@@ -146,33 +149,10 @@
                 <div class="magic-wall_item lazyload" >
                     <img src="images/3.jpg" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#" class="colorbox"></a>
+                    <a href="#" data-img="images/3.jpg;images/Adrian-Flux-Motorsport-e1546707189414.jpg" onclick="event.preventDefault();" class="colorbox"></a>
                 </div>
             </li>
-            <!-- magic wall 3 -->
-            <li>
-                <div class="magic-wall_item lazyload">
-                    <img src="images/Adrian-Flux-Motorsport-1.jpg" alt="image">
-                    <div class="hover-content"></div>
-                    <a href="#" class="colorbox"></a>
-                </div>
-            </li>
-            <!-- magic wall 3 -->
-            <li>
-                <div class="magic-wall_item lazyload">
-                    <img src="images/Bez-nazwy-3.jpg" alt="image">
-                    <div class="hover-content"></div>
-                    <a href="#" class="colorbox"></a>
-                </div>
-            </li>
-            <!-- magic wall 4 -->
-            <li>
-                <div class="magic-wall_item lazyload">
-                    <img src="images/https-club-silversurfers-com-wp-content-themes-club-2B-img-logo-svg.png" alt="image">
-                    <div class="hover-content"></div>
-                    <a href="#" class="colorbox"></a>
-                </div>
-            </li>
+          
         </ul>
     </div>
 
@@ -183,13 +163,21 @@
                 <h2>A propos de moi</h2>
             </div>
 
-            <p>Since Adobe Flash was a complete innovation, alongside with CSS 1.0 
-                and HTML 4.01 as standards of the current web I've been passionate about web.
+            <p>Je suis <a href="#" class="link">Ny Harena Fitahiantsoa</a>. 
+               J'ai 21 ans et je suis passionné d'informatique depuis ma formation à l'Ecole Nationnale d'Informatique (ENI) de Fianarantsoa, Madagascar en 2017.
+            </p>
+            <p>
+                Dire qu'après ses années je  sais tous de l'informatique maintenant serait une erreur. Cependant je sais que je peux m'adapter et réussir
+                dans tous ceux qu'on attends de moi avec une continuelle apprentissage et progression.
+                
             </p>
             
             <p>
-                I currently work remotely with a selected freelance client base being open 
-                for new opportunities.
+                Mon Objectif est de contribuer à changer le monde à l'aide de la technologie.
+            </p>
+            <p>
+               Voici quelques activités en ligne que je partage pour aider les autres dans le monde qui ont eu des problèmes similaire au mien.
+               (Evidement, j'aime avoir des "UP VOTES" et des "Stars" sur les forums et sur Github)
             </p>
         </div>
 
@@ -203,20 +191,20 @@
                         <li><a href="#" target="_blank">TypeScript</a></li>
                         <li><a href="#" target="_blank">REST</a></li>
                         <li><a href="#" target="_blank">JSON</a></li>
-                        <li><a href="#" target="_blank">GSAP</a></li>
-                        <li><a href="#" target="_blank">Data Science</a></li>
-                        <li><a href="#" target="_blank">Wordpress</a></li>
+                        <li><a href="#" target="_blank">Java</a></li>
+                        <li><a href="#" target="_blank">React.js</a></li>
+                        <li><a href="#" target="_blank">Firebase</a></li>
                         <li><a href="#" target="_blank">PHP</a></li>
                         <li><a href="#" target="_blank">Python</a></li>
                         <li><a href="#" target="_blank">Node JS</a></li>
                         <li><a href="#" target="_blank">Git</a></li>
-                        <li><a href="#" target="_blank">_lodash</a></li>
+                        <li><a href="#" target="_blank">yarn</a></li>
                         <li><a href="#" target="_blank">SASS</a></li>
                         <li><a href="#" target="_blank">JQuery</a></li>
-                        <li><a href="#" target="_blank">SQI</a></li>
-                        <li><a href="#" target="_blank">Gulp</a></li>
+                        <li><a href="#" target="_blank">SQL</a></li>
+                        <li><a href="#" target="_blank">MySQL</a></li>
                         <li><a href="#" target="_blank">npm</a></li>
-                        <li><a href="#" target="_blank">BEM</a></li>
+                        <li><a href="#" target="_blank">Tensorflow</a></li>
                     </ul>
                 </canvas>
             </div>
@@ -230,73 +218,77 @@
         <div class="fake-big-2">Activités</div>
     
         <!-- blog articles wrapper -->
+
+
         <div class="blog-articles">
     
-            <article class="post-articles" style="border-top: 2px solid #D6974C;">
+             <!-- Blog articles card 4-->
+             <article class="post-articles" style="border-top: 2px solid #6e5494;">
                 <div class="post-content">
-                    <time class="post-date" style="color: orange;">Stackoverflow</time>
+                    <time class="post-date" style="color: #6e5494">Github</time>
                     <div class="blog-post-title">
                         <h5>
-                            <a data-id="2113" href="#">
-                                Laravel Echo ?				
+                            <a data-id="2037" href="#">
+                                laravel-websockets-without-vuejs				
                             </a>
                         </h5>
                     </div>
                     <div class="blog-post-content">
-                        Aide pour résoudre le probleme de "Listener" avec Laravel Echo sans utiliser Vue.js.		
+                        Obtention de 3 étoiles sur ce repository qui aide les autres avec le "problème" de "Listener" avec Lavarel Echo sans utiliser le framework Vue.js	
                     </div>
                 </div>
             </article>
 
-            <article class="post-articles" style="border-top: 2px solid #D6974C;">
+            <article class="post-articles" style="border-top: 2px solid #d96311;">
                 <div class="post-content">
-                    <time class="post-date" style="color: orange;">Stackoverflow</time>
+                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
                     <div class="blog-post-title">
                         <h5>
                             <a data-id="2113" href="#">
-                                Server Sent Event ?			
+                                USING LARAVEL ECHO WITHOUT VUE.JS ?				
                             </a>
                         </h5>
                     </div>
                     <div class="blog-post-content">
-                        Resolution du probleme Server Sent Event avec React-native expo.		
+                        Aide pour résoudre le problème de "Listener" avec Laravel Echo sans utiliser le framework Vue.js qui est recommandé par la documentation de Laravel.		
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-articles" style="border-top: 2px solid #d96311;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
+                    <div class="blog-post-title">
+                        <h5>
+                            <a data-id="2113" href="#">
+                                HOW TO LISTEN TO SERVER SIDE EVENTS IN REACT NATIVE ?			
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="blog-post-content">
+                        Apport de possibilité de solution pour résoudre le problème de "Listen to server side events" en React Native.		
                     </div>
                 </div>
             </article>
 
             <!-- Blog articles card 3-->
-            <article class="post-articles" style="border-top: 2px solid #D6974C;">
+            <article class="post-articles" style="border-top: 2px solid #d96311;">
                 <div class="post-content">
-                    <time class="post-date" style="color: orange;">Stackoverflow</time>
+                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
                     <div class="blog-post-title">
                         <h5>
                             <a data-id="2113" href="#">
-                                React and Npm ?				
+                                React is not getting installed ?				
                             </a>
                         </h5>
                     </div>
                     <div class="blog-post-content">
-                       Apport de solution pour resoudre le probleme de caching lors de la creation d'un project React.js		
+                       Apport de solution pour résoudre des possibilités de problèmes lors de la creation d'un project React.js		
                     </div>
                 </div>
             </article>
     
-            <!-- Blog articles card 4-->
-            <article class="post-articles" style="border-top: 2px solid #D6974C;">
-                <div class="post-content">
-                    <time class="post-date" style="color: orange;">Github</time>
-                    <div class="blog-post-title">
-                        <h5>
-                            <a data-id="2037" href="#">
-                                Laravel Echo without Vue.js				
-                            </a>
-                        </h5>
-                    </div>
-                    <div class="blog-post-content">
-                        Obtention de 3 étoiles sur ce repository qui aide les autres avec le probleme de listener avec Lavarel Echo sans utiliser le framework Vue.js	
-                    </div>
-                </div>
-            </article>
+           
     
             </div>
     </section>
@@ -309,46 +301,248 @@
                 <h2>Compétences</h2>
             </div>
 
-            <p>Since Adobe Flash was a complete innovation, alongside with CSS 1.0 
-                and HTML 4.01 as standards of the current web I've been passionate about web.
+            <p>Toutes ses années, je n'ai cessé de travailler pour progresser dans la grande culture qu'est le développement d'application informatique.
+                <br/><br>Voici une liste des technologies, outils et notions que j'ai experimenté dans mon parcours.
+                <br/><br>
+                Evidement la liste de mes compétences est longue à détailler, alors je n'ai listé que les plus indispensable.
             </p>
             
         </div>
     </section>
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
+    <section data-load="blog" id="section-blog" class="section-full section-blog js-way " data-progress="animate" data-aos="fade-up" >
 
         <div class="fake-big-2">.......</div>
     
         <!-- blog articles wrapper -->
         <div class="blog-articles">
-    
-            <article class="post-articles-variant" style="border-top: 2px solid #D6974C;">
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
                 <div class="post-content">
-                    <time class="post-date" style="color: #D6974C;">Web</time>
+                    <time class="post-date" style="color: #ffffff;">Frameworks et Libraries Javascript Back-end</time>
                     <br>
                     <br><br>
                     <div class="skills" data-progress="animate" >
                         <div class="skill">
-                             <div class="skill-name">HTML</div>
+                             <div class="skill-name">Node.js avec <br> Express.js</div>
                              <div class="skill-bar">
-                                 <div class="skill-per" per="90%" style="max-width: 90%;"></div>
+                                 <div class="skill-per" per="90%" style="max-width: 90%;background-color: #3c873a"></div>
+                             </div>
+                        </div>
+                   
+                </div>
+            </article>
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #FFFFFF;">Frameworks et Libraries Javascript Front-end</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">React.js</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="90%" style="max-width: 90%;background-color: #61dbfb"></div>
                              </div>
                         </div>
                         <div class="skill">
-                            <div class="skill-name">CSS</div>
+                            <div class="skill-name">JQuery</div>
                             <div class="skill-bar">
-                                <div class="skill-per" per="70%" style="max-width: 70%;"></div>
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #0769ad"></div>
+                            </div>
+                       </div>
+                </div>
+            </article>
+
+           
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Frameworks PHP</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">Laravel</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="85%" style="max-width: 85%;background-color: #fb503d"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Symfony</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="60%" style="max-width: 60%;background-color: #ffffff"></div>
                             </div>
                        </div>
                        <div class="skill">
-                            <div class="skill-name">JS</div>
+                            <div class="skill-name">Codeigniter</div>
                             <div class="skill-bar">
-                                <div class="skill-per" per="50%" style="max-width: 50%;"></div>
+                                <div class="skill-per" per="60%" style="max-width: 60%;background-color: #DD4814"></div>
                             </div>
                          </div>
-                    </div><br><br><br>
-                    <time class="post-date" style="color: #D6974C;">Mobile </time>
-                   
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Mobiles</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">React Native</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="75%" style="max-width: 75%;background-color: #61DBFB"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Flutter</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="50%" style="max-width: 50%;background-color: #166dac"></div>
+                            </div>
+                       </div>
+                       <div class="skill">
+                            <div class="skill-name">Android Native Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="70%" style="max-width: 70%;background-color: #669933"></div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </article>
+           
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Intélligence Artificiel (Computer Vision)</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">Tensorflow</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="60%" style="max-width: 60%;background-color: #e45c2c"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">OpenCV</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="60%" style="max-width: 60%;background-color: #0404fc"></div>
+                            </div>
+                       </div>
+                       
+                    </div>
+                </div>
+            </article>
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Service Web et Outils de développement</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                            <div class="skill-name">Firebase</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #ffcb2b"></div>
+                            </div>
+                       </div>
+                        <div class="skill">
+                             <div class="skill-name">Git et Github</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="80%" style="max-width: 80%;background-color: #6e5494"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Trello</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #008fe4"></div>
+                            </div>
+                       </div>
+                       
+                    </div>
+                </div>
+            </article>
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Concéptions, modélisations, design pattern et architecture</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">UML</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="85%" style="max-width: 85%;background-color: #9c1942"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">Merise</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #ffffff"></div>
+                            </div>
+                       </div>
+                       <div class="skill">
+                        <div class="skill-name">Model View Controller (MVC)</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="80%" style="max-width: 80%;background-color: #ffffff"></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name"> Representational State Transfer (REST)</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #ffffff"></div>
+                            </div>
+                   </div>
+                       
+                    </div>
+                </div>
+            </article>
+
+            <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
+                <div class="post-content">
+                    <time class="post-date" style="color: #ffffff;">Langages</time>
+                    <br>
+                    <br><br>
+                    <div class="skills" data-progress="animate" >
+                        <div class="skill">
+                             <div class="skill-name">Javascript</div>
+                             <div class="skill-bar">
+                                 <div class="skill-per" per="85%" style="max-width: 85%;background-color: #f0db4f"></div>
+                             </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">TypeScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="50%" style="max-width: 50%;background-color: #3178c6"></div>
+                            </div>
+                       </div>
+                       <div class="skill">
+                            <div class="skill-name">PHP</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="80%" style="max-width: 80%;background-color: #474a8a"></div>
+                            </div>
+                         </div>
+                         <div class="skill">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="75%" style="max-width: 75%;background-color: #044f88"></div>
+                            </div>
+                         </div> 
+                         <div class="skill">
+                            <div class="skill-name">Dart</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="70%" style="max-width: 70%;background-color: #0075ba"></div>
+                            </div>
+                         </div>
+                         <div class="skill">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="75%" style="max-width: 75%;background-color: #ffd43b"></div>
+                            </div>
+                         </div>
+                         <div class="skill">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="60%" style="max-width: 60%;background-color: #ac2929"></div>
+                            </div>
+                         </div>
+
+                    </div>
+                </div>
                 </div>
             </article>
     
@@ -362,8 +556,10 @@
                 <h2>Cirrucilum Vitae</h2>
             </div>
 
-            <p>Since Adobe Flash was a complete innovation, alongside with CSS 1.0 
-                and HTML 4.01 as standards of the current web I've been passionate about web.
+            <p>D'autres détails me concernant peuvent etre trouver sur mon CV.
+                <br>
+                <br>
+                Je vous invite à bien vouloir le lire. :)
             </p>
             
         </div>
@@ -376,7 +572,7 @@
         <!-- blog articles wrapper -->
         <div class="blog-articles">
     
-            <article class="post-articles-variant" style="border-top: 2px solid #D6974C;">
+            <article class="pdf-container" style="border-top: 2px solid #D6974C;">
                 <div class="post-content">
                     <a href="./doc/cv.pdf" target="_blank" class="contact-button">
                         <div>
@@ -398,8 +594,41 @@
     
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+      
+        <!-- Modal Content (The Image) -->
+        
+        <div class="modal-container">
+          
+                <div class="modal-center">
+                    <div class="image-content" id="image-content" >
+                          <div class="slideshow-container" id="slideshow-container" >
+
+                          </div>
+                          <br>
+                          
+                          <!-- The dots/circles -->
+                          <div style="text-align:center" id="dot-menu" >
+                          </div>
+                    </div>
+                    <div class="detail-content">
+                        <div id="detail-content" class="detail" >
+
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+          
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
     <script src="./js/aos.js"></script>
-  
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery.tagcanvas.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
@@ -407,6 +636,8 @@
     <script src="./js/main.js"></script>
     <script src="./js/link.js"></script>
     <script src="./js/progressBar.js"></script>
+    <script src="./js/imageSlide.js"></script>
+    <script src="./js/modal.js"></script>
     <script>
       
         document.addEventListener('DOMContentLoaded', (event) => {

@@ -48,13 +48,13 @@ const myFunc = (navCondition) => {
 $(document).ready(function (){
     
     if(!$("#myCanvas").tagcanvas({
-        textColour: "#D6974C",
+        textColour: "#ffffff",
         outlineColour: "transparent",
         reverse: true,
         depth: 0.8,
         maxSpeed: 0.05,
         weight: true,
-        initial: [0.3, -0.3]
+        initial: [0.1, -0.3]
         
     }, "tags")){
         // something went wrong hide the canvas container,
