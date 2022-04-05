@@ -26,6 +26,44 @@ header{
     z-index: 999;
 }
 
+#clock-loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid #D6974C;
+    border-radius: 50%;
+}
+
+#clock-loader::before, #clock-loader::after{
+    position: absolute;
+    content: "";
+    top: calc(4rem*0.25/2);
+    width: 0.2rem;
+    background-color: #D6974C;
+    border-radius: 10px;
+    transform-origin: center calc(100% - calc(0.2rem / 2));
+    animation: spin infinite linear;
+}
+
+#clock-loader::before {
+    height: calc(4rem * 0.4);
+    animation-duration: 2s;
+}
+#clock-loader::after {
+    top: calc(4rem*0.25/2 + 4rem*0.2);
+    height: calc(4rem*0.2);
+    animation-duration: 15s;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 #sound{
     padding: 7px;
     background-color: #1b1b1b;

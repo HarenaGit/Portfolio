@@ -48,8 +48,6 @@ var showModal = () => {
             
                 $badged = $badged + `<p class="badged-modal" style="border: 1px solid ${bgdColor}" >${bgdText}</p>`
             
-            
-            
         }
         $modalDetail.append(`
         <div style="display:block;padding: 50px">
@@ -57,7 +55,7 @@ var showModal = () => {
                 <h2>${title}</h2>
             </div>
 
-            <p>${content}
+            <p style="letter-spacing: 2px;line-height: 1.5rem;">${content}
             </p>
             <div class="text-sub-modal">
                 <h3>${subTitle}</h3>

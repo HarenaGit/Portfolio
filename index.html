@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: rgb(29,29,29);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
+
+    <div id="preloader">
+        <div id="clock-loader" ></div>
+    </div>
     <header>
         <div id="sound">
             <audio  id="myAudio">
@@ -53,18 +70,18 @@
             <!-- social icons -->
             <ul class="social-icons">
                 <li>
-                    <a href="">
+                    <a href="https://github.com/HarenaGit" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://stackoverflow.com/users/12769257/ny-harena-fitahiantsoa-raherim" target="_blank">
                         <i class="fab fa-stack-overflow"></i>
                     </a>
                 </li>
                
                 <li>
-                    <a href="">
+                    <a href="https://web.facebook.com/profile.php?id=100009279701344" target="_blank">
                         <i class="fab fa-facebook"></i>
                     </a>
                 </li>
@@ -160,7 +177,7 @@
                     <div class="hover-content"></div>
                     <a href="#" data-img="images/project/gendarmerie/1.JPG;images/project/gendarmerie/2.JPG" data-title="Face.AI" 
                     data-content="Une Application Web exportable en application mobile de reconnaissance faciale. 
-                    Développer avec Node.js et Express.js en se basant sur les models de detection de visage de Tensorflow pour le back-end, et React.js pour la partie front-end de l'application.
+                    <br><br><pstyle='letter-spacing: 2px;line-height: 1.5rem;' >Développer avec Node.js et Express.js en se basant sur les models de detection de visage de Tensorflow pour le back-end, et React.js pour la partie front-end de l'application.</p>
                     " data-sub-title="Mots clés" data-badge="Node.js/#3c873a, REACT.js/#61dbfb, Tensorflow/#e45c2c"  
                     onclick="event.preventDefault();" class="colorbox">
                         
@@ -272,7 +289,7 @@
                     <time class="post-date" style="color: #6e5494">Github</time>
                     <div class="blog-post-title">
                         <h5>
-                            <a data-id="2037" href="#">
+                            <a data-id="2037" href="https://github.com/HarenaGit/laravel-websockets-without-vuejs" target="_blank">
                                 laravel-websockets-without-vuejs				
                             </a>
                         </h5>
@@ -288,7 +305,7 @@
                     <time class="post-date" style="color: #d96311;">Stackoverflow</time>
                     <div class="blog-post-title">
                         <h5>
-                            <a data-id="2113" href="#">
+                            <a data-id="2113" href="https://stackoverflow.com/questions/43407521/using-laravel-echo-without-vue-js/68249864#68249864" target="_blank">
                                 USING LARAVEL ECHO WITHOUT VUE.JS ?				
                             </a>
                         </h5>
@@ -304,7 +321,7 @@
                     <time class="post-date" style="color: #d96311;">Stackoverflow</time>
                     <div class="blog-post-title">
                         <h5>
-                            <a data-id="2113" href="#">
+                            <a data-id="2113" href="https://stackoverflow.com/questions/56654542/how-to-listen-to-server-side-events-in-react-native/59880269#59880269" target="_blank">
                                 HOW TO LISTEN TO SERVER SIDE EVENTS IN REACT NATIVE ?			
                             </a>
                         </h5>
@@ -321,7 +338,7 @@
                     <time class="post-date" style="color: #d96311;">Stackoverflow</time>
                     <div class="blog-post-title">
                         <h5>
-                            <a data-id="2113" href="#">
+                            <a data-id="2113" href="https://stackoverflow.com/questions/63384127/react-is-not-getting-installed/67000010#67000010" target="_blank" >
                                 React is not getting installed ?				
                             </a>
                         </h5>
@@ -711,8 +728,16 @@
         <div id="caption"></div>
     </div>
 
-    <script src="./js/aos.js"></script>
+   
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(window).on('load', () => {
+            console.log('loaded')
+            $('#preloader').fadeOut('slow');
+            console.log('fade')
+        })
+    </script>
+    <script src="./js/aos.js"></script>
     <script src="./js/jquery.tagcanvas.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/index.js"></script>
@@ -727,6 +752,7 @@
             canvasInit();
             AOS.init();
         });
+        
     </script>
     
 </body>
