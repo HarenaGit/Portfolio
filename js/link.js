@@ -21,7 +21,7 @@ var navigationSection = () => {
             navActive($(this.element).data('section'));
           }
     }, {
-          offset: '150px'
+          offset: '50%'
     });
 
     $section.waypoint(function(direction) {
@@ -53,8 +53,21 @@ var clickMenu = () => {
 
 };
 
+var contactMe = () => {
+    $('.contact-me-button').click(function(event){
+                  
+            $('html, body').animate({
+                scrollTop: $('[data-section="' + 'section-contact' + '"]').offset().top - 55
+            }, 500);
+        
+        event.preventDefault();
+        return false;
+    });
+}
+
 
 $(document).ready(() => {
     navigationSection()
     clickMenu()
+    contactMe()
 })

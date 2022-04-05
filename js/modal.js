@@ -44,10 +44,15 @@ var showModal = () => {
             var bgdValue = currentBgd.split('/')
             var bgdText = bgdValue[0] || ''
             var bgdColor = bgdValue[1] || ''
-            $badged = $badged + `<strong class="badged-modal" style="border: 2px solid ${bgdColor}" >${bgdText}</strong>`
+            var w = window.screen.width;
+            
+                $badged = $badged + `<p class="badged-modal" style="border: 1px solid ${bgdColor}" >${bgdText}</p>`
+            
+            
+            
         }
         $modalDetail.append(`
-        <div class="text-zone2">
+        <div style="display:block;padding: 50px">
             <div class="text-zone-modal"  >
                 <h2>${title}</h2>
             </div>
@@ -57,9 +62,9 @@ var showModal = () => {
             <div class="text-sub-modal">
                 <h3>${subTitle}</h3>
             </div>
-            <p style="padding-bottom: 30px;" >
+            <div >
                 ${$badged}
-            </p>
+            </div>
 
         </div>`)
 

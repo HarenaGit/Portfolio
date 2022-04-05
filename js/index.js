@@ -28,9 +28,6 @@ const btnTimes = document.querySelector('.times');
 const SideNav = document.querySelector('.aside');
 
 
-btnBars.addEventListener('click', () => myFunc('open'));
-btnTimes.addEventListener('click', () => myFunc('close'));
-
 const myFunc = (navCondition) => {
     if(navCondition === 'open'){
         SideNav.classList.add('show-nav');
@@ -42,11 +39,27 @@ const myFunc = (navCondition) => {
             btnTimes.style.display = "none";
             btnBars.style.display = "block";
     }
+    else if(navCondition === 'menu'){
+        SideNav.classList.remove('show-nav');
+        btnTimes.style.display = "none";
+        btnBars.style.display = "block";
+    }
+
 }
+
+btnBars.addEventListener('click', () => myFunc('open'));
+btnTimes.addEventListener('click', () => myFunc('close'));
+
+
+
+
 
 
 $(document).ready(function (){
-    
+
+    $('.menu').click(()=>{
+        myFunc('close')
+    })
     if(!$("#myCanvas").tagcanvas({
         textColour: "#ffffff",
         outlineColour: "transparent",
