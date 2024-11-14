@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <title>Ny Harena</title>
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/experience.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <style>
         #preloader {
@@ -17,22 +19,23 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-color: rgb(29,29,29);
+            background-color: rgb(29, 29, 29);
             display: flex;
             justify-content: center;
             align-items: center;
         }
     </style>
 </head>
+
 <body>
 
     <div id="preloader">
-        <div id="clock-loader" ></div>
+        <div id="clock-loader"></div>
     </div>
     <header>
         <div id="sound">
-            <audio  id="myAudio">
-                <source src="./Night.mp3"  />
+            <audio id="myAudio">
+                <source src="./Night.mp3" />
             </audio>
             <i class="fab fa-soundcloud sound-cloud"></i>
             <span>Audio</span>
@@ -51,22 +54,19 @@
     <aside class="aside">
         <div class="aside-wrapper">
             <div class="logo-section">
-                <a class="logo" rel="home" href="#">
-                    <div>
-                        <span><strong>&#60;&#62;</strong>Ny<strong>&#60;/&#62;</strong></span>
-                    </div>
-                    <p>Harena</p>
-                </a>
-                <span>Développeur Junior</span>
+                <img src="images/profile/avatar 1.jpg" class="background-aside-image" />
+
             </div>
+            <div class="overlay-aside"></div>
 
             <nav class="nav-links">
-                <a href="#" data-nav-section="section-home" class="active-link menu" >Accueil</a>
-                <a href="#" data-nav-section="section-work" class="menu"  >Réalisation</a>
-                <a href="#" data-nav-section="section-about" class="menu" >À propos</a>
-                <a href="#" data-nav-section="section-skills" class="menu" >Compétence</a>
-                <a href="#" data-nav-section="section-cv" class="menu" >CV</a>
-                <a href="#" data-nav-section="section-contact" class="menu" >Contact</a>
+                <a href="#" data-nav-section="section-home" class="active-link menu">Home</a>
+                <a href="#" data-nav-section="section-work" class="menu">Experiences</a>
+                <a href="#" data-nav-section="section-project" class="menu">Projects</a>
+                <a href="#" data-nav-section="section-about" class="menu">About me</a>
+                <a href="#" data-nav-section="section-skills" class="menu">Skills</a>
+                <!-- <a href="#" data-nav-section="section-cv" class="menu" >Resume</a> -->
+                <a href="#" data-nav-section="section-contact" class="menu">Contact</a>
             </nav>
             <!-- social icons -->
             <ul class="social-icons">
@@ -80,7 +80,7 @@
                         <i class="fab fa-stack-overflow"></i>
                     </a>
                 </li>
-               
+
                 <li>
                     <a href="https://web.facebook.com/profile.php?id=100009279701344" target="_blank">
                         <i class="fab fa-facebook"></i>
@@ -93,21 +93,21 @@
 
     <section id="section-home" data-section="section-home" class="section-home">
         <div class="text-zone">
-            <h1><span class="bottom anime-text" >Je</span>  <br>
-                <span class="bottom" >Suis Ny Harena,</span> <br>  <span>Développeur Junior</span>
+            <h1><span class="bottom anime-text">Hi</span> <br>
+                <span class="bottom">I'm Ny Harena Fi.</span> <br> <span></span>
             </h1>
 
-            <p class="gray-text">Spécialisé en développement Web (Full-stack).</p>
+            <p class="gray-text">Confirmed Fullstack Developer Engineer JAVA/REACT</p>
 
             <br>
 
-                <!-- contact button -->
+            <!-- contact button -->
             <a href="#" class="contact-button contact-me-button">
                 <div>
                     <span class="bg"></span>
                     <span class="base"></span>
                     <span class="text">
-                        Me Contacter
+                        Contact Me
                     </span>
                 </div>
             </a>
@@ -115,58 +115,160 @@
 
         <!--  -->
         <div class="scroll-down">
-            <span>parcourir</span>
+            <span>scroll-down</span>
             <i class="fas fa-arrow-down"></i>
         </div>
 
         <div class="scroll-down scroll-down--left">
-            <span>parcourir</span>
+            <span>scroll-down</span>
             <i class="fas fa-arrow-down"></i>
         </div>
 
-        <canvas id="particle" ></canvas>
+        <canvas id="particle"></canvas>
     </section>
 
-    <section id="section-work" data-section="section-work" >
+    <section id="section-work" data-section="section-work">
         <div id="header" data-aos="fade-right">
-            <h2>Réalisation</h2>
+            <h2>Experiences</h2>
         </div>
-        <div class="text-zone-2"  data-aos="fade-right" >
-            <div>
-                <p>Une petite galerie d'images des projets récents que j'ai choisis d'illustrer. Je les ai tout réalisés en modifiant des templates ou en créant un quand je n'en trouve pas à adapter aux problèmes.
-                   
-                    
-                    <br>
-                    Bien évidemment, dès fois je travaille en équipe sur d'autres projets avec l'outil de versioning Git et son site officiel <a class="link" target="_blank" href="https://www.github.com" >Github</a>
-                </p>
-            </div>
-            <!-- my portfolio button -->
-            <a href="#" class="contact-button contact-me-button" >
+        <div class="" data-aos="fade-right">
+
+            <section class="col">
+
+                <div class="contents">
+
+                    <div class="box">
+                        <h4>05/2022 - now</h4>
+                        <h3>Confirmed Fullstack Developer Java/React</h3>
+                        <div class="entreprise-name"><a href="https://etechconsulting-mg.com/" target="_blank">ETECH
+                                CONSULTING Anosivavaka Antananarivo Madagascar</a></div>
+                        <br />
+                        <p class="description-enterprise"><span class="title-entreprise-detail">Etech</span> is an IT
+                            services company based in Madagascar, a subsidiary of the ArkeUp Group in Paris.</p>
+                        <div class="entreprise-detail">
+                            <p><span class="title-entreprise-detail">Missions</span>: Contributed to the analysis,
+                                design, development, and maintenance of six web applications, primarily using Maps and
+                                Google Cloud technologies.</p>
+                            <p><span class="title-entreprise-detail">Technologies</span>: JAVA/SpringBoot, React, Google
+                                Cloud, Google Maps, CARTO Platform, PostgreSQL, MongoDB</p>
+                            <p><span class="title-entreprise-detail">Mentored </span> students from top universities in
+                                Madagascar through IT skill development programs focused on Cloud and Java.</p>
+                            <p><span class="title-entreprise-detail">Completed detailed training</span> on Google Cloud
+                                and Google Maps, achieving Google Maps certification for the company.</p>
+                            <p><span class="title-entreprise-detail">Skills Gained : </span> Application performance
+                                optimization, maintenance of various applications, deployment practices, and hands-on
+                                experience with Cloud and Maps technologies</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h4>11/2019 - 03/2020</h4>
+                        <h3>Intern in Web and Mobile Application Development</h3>
+                        <div class="entreprise-name"><a href="https://www.asecna.aero/index.php/fr/"
+                                target="_blank">ASECNA Madagascar (Agence pour la Sécurité de la Navigation
+                                Aérienne)</a></div>
+                        <br />
+                        <p class="description-enterprise"><span class="title-entreprise-detail">ASECNA</span> : An
+                            intergovernmental organization providing air traffic management, safety, and navigability
+                            services in several African countries.</p>
+                        <div class="entreprise-detail">
+                            <p><span class="title-entreprise-detail">Role</span>: Involved in the design and development
+                                of a web and mobile application dedicated to equipment management.</p>
+                            <p><span class="title-entreprise-detail">Technologies</span>: PHP/Symfony, React & React
+                                Native.</p>
+                        </div>
+                    </div>
+
+                    <div class="title">
+                        <h2>Degrees / Certification</h2>
+                    </div>
+
+                    <div class="box">
+                        <h4>2022</h4>
+                        <h3>Master's Degree in Engineering Sciences, with High Honors</h3>
+                        <div class="entreprise-name"><a href="https://eni.mg/" target="_blank">Ecole Nationale
+                                d'Informatique de Madagascar (E.N.I)</a></div>
+                        <br />
+                        <div class="entreprise-detail">
+                            <p><span class="title-entreprise-detail">Field</span>: Computer Science</p>
+                            <p><span class="title-entreprise-detail">Specialization</span>: Software Engineering and
+                                Databases</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h4>2017</h4>
+                        <h3>Certification in English</h3>
+                        <div class="entreprise-name"><a href="https://web.facebook.com/etp.madagascar"
+                                target="_blank">English Teaching Program (ETP), in partnership with the U.S. Embassy,
+                                Madagascar</a></div>
+                        <br />
+                        <div class="entreprise-detail">
+                            <p>Awarded after 2 years of training and successful exams, in Antsahavola, Antananarivo,
+                                Madagascar.</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h4>2016</h4>
+                        <h3>High School Degree in General Education - Scientific Track, with Honors</h3>
+                        <div class="entreprise-name"><a
+                                href="https://web.facebook.com/groups/lyceeJosephRavoahangyAndrianavalona/?_rdc=1&_rdr#"
+                                target="_blank">Lycée LJRA Andranonahoatra Itaosy, Antananarivo, Madagascar</a></div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- <a href="#" class="contact-button contact-me-button" >
                 <div>
                     <span class="bg"></span>
                     <span class="base"></span>
                     <span class="text">
-                        Me Contacter!
+                        Contact Me
+                    </span>
+                </div>
+            </a> -->
+        </div>
+        <div class="fake-big-2" data-aos="fade-left">Works</div>
+    </section>
+
+    <section id="section-work" data-section="section-project">
+        <div id="header" data-aos="fade-right">
+            <h2>Projects</h2>
+        </div>
+        <div class="text-zone-2" data-aos="fade-right">
+            <div>
+                <p>Some simple projects that I want to share. The one named Face.AI is my favorite.</p>
+            </div>
+            <!-- my portfolio button -->
+            <a href="#" class="contact-button contact-me-button">
+                <div>
+                    <span class="bg"></span>
+                    <span class="base"></span>
+                    <span class="text">
+                        Contact Me
                     </span>
                 </div>
             </a>
         </div>
-        <div class="fake-big-2" data-aos="fade-left"  >Travaux</div>
+        <div class="fake-big-2" data-aos="fade-left">Projects</div>
     </section>
 
 
-    <div id="home-magicwall" class="fake-magicwall" data-aos="fade-up" >
+    <div id="home-magicwall" class="fake-magicwall" data-aos="fade-up">
         <ul>
             <li>
                 <div class="magic-wall_item lazyload" data-item="test" id="modal1">
                     <img src="images/project/top mariage/1.JPG" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#"  data-img="images/project/top mariage/1.JPG;images/project/top mariage/2.png;images/project/top mariage/3.png;images/project/top mariage/4.png" data-title="Top Mariage Fianarantsoa" 
-                    data-content="Un site qu'on m'a demandé de créer du back-end au front-end <a target='_blank' style='color: #D6974C;text-decoration: none;' href='https://www.topmariage.mg' >Top Mariage Fianarantsoa</a>.
-                    Un site de présentation moderne pour les clients ainsi que pour la gestion de leurs activités.
-                    " data-sub-title="Technologies Utilisées" data-badge="LARAVEL/#fb503d, REACT.js/#61dbfb, Firebase Cloud Messaging/#ffcb2b"  
-                    onclick="event.preventDefault();" class="colorbox">
-                        
+                    <a href="#"
+                        data-img="images/project/top mariage/1.JPG;images/project/top mariage/2.png;images/project/top mariage/3.png;images/project/top mariage/4.png"
+                        data-title="Top Mariage Fianarantsoa" data-content="A website I was asked to create from back-end to front-end <a target='_blank' style='color: #D6974C;text-decoration: none;' href='https://www.topmariage.mg' >Top Mariage Fianarantsoa</a>.
+                    A modern presentation website for clients as well as for managing their activities."
+                        data-sub-title="Technologies Used"
+                        data-badge="LARAVEL/#fb503d, REACT.js/#61dbfb, Firebase Cloud Messaging/#ffcb2b"
+                        onclick="event.preventDefault();" class="colorbox">
+
                     </a>
                 </div>
             </li>
@@ -175,12 +277,13 @@
                 <div class="magic-wall_item lazyload" data-item="test" id="modal1">
                     <img src="images/project/gendarmerie/1.JPG" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#" data-img="images/project/gendarmerie/1.JPG;images/project/gendarmerie/2.JPG" data-title="Face.AI" 
-                    data-content="Une Application Web exportable en application mobile de reconnaissance faciale. 
-                    <br><br><pstyle='letter-spacing: 2px;line-height: 1.5rem;' >Développer avec Node.js et Express.js en se basant sur les modèles de detection de visage de Tensorflow pour le back-end, et React.js pour la partie front-end de l'application.</p>
-                    " data-sub-title="Mots clés" data-badge="Node.js/#3c873a, REACT.js/#61dbfb, Tensorflow/#e45c2c"  
-                    onclick="event.preventDefault();" class="colorbox">
-                        
+                    <a href="#" data-img="images/project/gendarmerie/1.JPG;images/project/gendarmerie/2.JPG"
+                        data-title="Face.AI"
+                        data-content="A Web Application exportable to a mobile application for facial recognition.
+                    <br><br><pstyle='letter-spacing: 2px;line-height: 1.5rem;' >Developed with Node.js and Express.js based on TensorFlow face detection models for the back-end, and React.js for the front-end of the application.</p>"
+                        data-sub-title="Keywords" data-badge="Node.js/#3c873a, REACT.js/#61dbfb, Tensorflow/#e45c2c"
+                        onclick="event.preventDefault();" class="colorbox">
+
                     </a>
                 </div>
             </li>
@@ -189,13 +292,15 @@
                 <div class="magic-wall_item lazyload" data-item="test" id="modal1">
                     <img src="images/project/plane/1.JPG" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#" data-img="images/project/plane/1.JPG;images/project/plane/2.JPG;images/project/plane/3.JPG;images/project/plane/4.JPG" data-title="Template Réservation de place d'avion" 
-                    data-content="Un template Android que j'ai créé après avoir vu qu'il en manque des templates pour les projets android sur internet.
-                    <br><br><p>La conception du design a été faite avec adobe XD et l'integration en Android/Java</p>
-                    <br><br><p>Lien github du projet : <a target='_blank' style='color: #D6974C;text-decoration: none;' href='https://github.com/HarenaGit/android_admin_ui' >android_admin_ui</a></p>"
-                    " data-sub-title="Mots clés" data-badge="Android/#669933, Java/#ac2929, Adode XD/#dd1fcd"  
-                    onclick="event.preventDefault();" class="colorbox">
-                        
+                    <a href="#"
+                        data-img="images/project/plane/1.JPG;images/project/plane/2.JPG;images/project/plane/3.JPG;images/project/plane/4.JPG"
+                        data-title="Template Réservation de place d'avion"
+                        data-content="An Android template I created after noticing the lack of templates for Android projects on the internet.
+                    <br><br><p>The design was created with Adobe XD and the integration in Android/Java</p>
+                    <br><br><p>GitHub link for the project: <a target='_blank' style='color: #D6974C;text-decoration: none;' href='https://github.com/HarenaGit/android_admin_ui' >android_admin_ui</a></p>"
+                        data-sub-title="Keywords" data-badge="Android/#669933, Java/#ac2929, Adobe XD/#dd1fcd"
+                        onclick="event.preventDefault();" class="colorbox">
+
                     </a>
                 </div>
             </li>
@@ -204,177 +309,216 @@
                 <div class="magic-wall_item lazyload" data-item="test" id="modal1">
                     <img src="images/project/geniusis/1.jpg" alt="image">
                     <div class="hover-content"></div>
-                    <a href="#" data-img="images/project/geniusis/1.jpg;images/project/geniusis/2.png;images/project/geniusis/3.jpg;images/project/geniusis/4.png" data-title="Geniusis" 
-                    data-content="Une application web et mobile que j'ai développé et qui vise à aider dans la Gestion Préventive des équipements de l'ASECNA durant mon Stage de Licence.
-                    " data-sub-title="Technologies Utilisées" data-badge="Symfony/#ffffff, REACT.js/#61dbfb, REACT Native/#61dbfb, Mercure Protocol/#61dbfb"  
-                    onclick="event.preventDefault();" class="colorbox">
-                        
+                    <a href="#"
+                        data-img="images/project/geniusis/1.jpg;images/project/geniusis/2.png;images/project/geniusis/3.jpg;images/project/geniusis/4.png"
+                        data-title="Geniusis"
+                        data-content="A web and mobile application I developed aimed at assisting in the Preventive Maintenance of ASECNA's equipment during my Bachelor's internship."
+                        data-sub-title="Technologies Used"
+                        data-badge="Symfony/#ffffff, REACT.js/#61dbfb, REACT Native/#61dbfb, Mercure Protocol/#61dbfb"
+                        onclick="event.preventDefault();" class="colorbox">
+
                     </a>
                 </div>
             </li>
 
-         
+
         </ul>
     </div>
 
-    <section id="section-about" data-section="section-about" >
+    <section id="section-about" data-section="section-about">
 
-        <div class="text-zone3" data-aos="fade-right" >
-            <div id="header" >
-                <h2>À propos de moi</h2>
+        <div class="text-zone3" data-aos="fade-right">
+            <div id="header">
+                <h2>About me</h2>
             </div>
 
-            <p>Mon nom est <a href="#" class="link">Ny Harena Fitahiantsoa</a>. 
-               J'ai 21 ans et je suis passionné d'informatique depuis ma formation à l'Ecole Nationnale d'Informatique (ENI) de Fianarantsoa, Madagascar en 2017.
+            <p>Hi, I am<a href="#" class="link" style="text-decoration: none;"> Ny Harena</a>,
+                a confirmed Fullstack Developer with expertise in JAVA and REACT.
             </p>
             <p>
-                Je peux m'adapter et je peux réussir
-                dans tous les travails qu'on me confie de réaliser dans une allure d'apprentissage et de progression.
-                
-            </p>
-            
-            <p>
-                Mon Objectif est de contribuer à changer le monde à l'aide de la technologie.
+                I am about to reach 3 years of professional experience in development.
             </p>
             <p>
-               Voici quelques activités en ligne que je partage pour aider les autres dans le monde qui ont eu des problèmes similaireS au mien.
-               (Evidement, j'aime avoir des "UP VOTES" et des "Stars" sur les forums et sur Github)
+                I am passionate about finding innovative solutions using CLOUD and MAPS technologies.
             </p>
+
+            <p>
+                I thrive on challenges and am always eager to learn new things as they push me to improve and grow every
+                day.
+            </p>
+        </div>
+        <div>
+            <div class="container-image-me"></div>
         </div>
 
-        <div class="skills-charts">
-            <div id="myCanvasContainer">
-                <canvas width="500" height="500" id="myCanvas">
-                    <ul id="tags">
-                        <li><a href="#" target="_blank">HTML</a></li>
-                        <li><a href="#" target="_blank">CSS</a></li>
-                        <li><a href="#" target="_blank">ES5</a></li>
-                        <li><a href="#" target="_blank">TypeScript</a></li>
-                        <li><a href="#" target="_blank">REST</a></li>
-                        <li><a href="#" target="_blank">JSON</a></li>
-                        <li><a href="#" target="_blank">Java</a></li>
-                        <li><a href="#" target="_blank">React.js</a></li>
-                        <li><a href="#" target="_blank">Firebase</a></li>
-                        <li><a href="#" target="_blank">PHP</a></li>
-                        <li><a href="#" target="_blank">Python</a></li>
-                        <li><a href="#" target="_blank">Node JS</a></li>
-                        <li><a href="#" target="_blank">Git</a></li>
-                        <li><a href="#" target="_blank">yarn</a></li>
-                        <li><a href="#" target="_blank">SASS</a></li>
-                        <li><a href="#" target="_blank">JQuery</a></li>
-                        <li><a href="#" target="_blank">SQL</a></li>
-                        <li><a href="#" target="_blank">MySQL</a></li>
-                        <li><a href="#" target="_blank">npm</a></li>
-                        <li><a href="#" target="_blank">Tensorflow</a></li>
-                    </ul>
-                </canvas>
-            </div>
-        </div>
     </section>
 
 
-        
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
 
-        <div class="fake-big-2">Activités</div>
-    
+    <section data-load="blog" id="section-work" class="section-full section-blog js-way" data-aos="fade-up">
+
+
+        <!-- <div class="fake-big-2">Contributions</div> -->
+
         <!-- blog articles wrapper -->
 
-
-        <div class="blog-articles">
-    
-             <!-- Blog articles card 4-->
-             <article class="post-articles" style="border-top: 2px solid #6e5494;">
-                <div class="post-content">
-                    <time class="post-date" style="color: #6e5494">Github</time>
-                    <div class="blog-post-title">
-                        <h5>
-                            <a data-id="2037" href="https://github.com/HarenaGit/laravel-websockets-without-vuejs" target="_blank">
-                                laravel-websockets-without-vuejs				
-                            </a>
-                        </h5>
-                    </div>
-                    <div class="blog-post-content">
-                        Obtention de 3 étoiles sur ce repository qui aide les autres avec le problème de "Listener avec Lavarel Echo sans utiliser le framework Vue.js".	
-                    </div>
-                </div>
-            </article>
-
-            <article class="post-articles" style="border-top: 2px solid #d96311;">
-                <div class="post-content">
-                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
-                    <div class="blog-post-title">
-                        <h5>
-                            <a data-id="2113" href="https://stackoverflow.com/questions/43407521/using-laravel-echo-without-vue-js/68249864#68249864" target="_blank">
-                                USING LARAVEL ECHO WITHOUT VUE.JS ?				
-                            </a>
-                        </h5>
-                    </div>
-                    <div class="blog-post-content">
-                        Aide pour résoudre le problème de "Listener avec Laravel Echo sans utiliser le framework Vue.js" qui est recommandé par la documentation de Laravel.		
-                    </div>
-                </div>
-            </article>
-
-            <article class="post-articles" style="border-top: 2px solid #d96311;">
-                <div class="post-content">
-                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
-                    <div class="blog-post-title">
-                        <h5>
-                            <a data-id="2113" href="https://stackoverflow.com/questions/56654542/how-to-listen-to-server-side-events-in-react-native/59880269#59880269" target="_blank">
-                                HOW TO LISTEN TO SERVER SIDE EVENTS IN REACT NATIVE ?			
-                            </a>
-                        </h5>
-                    </div>
-                    <div class="blog-post-content">
-                        Apport de possibilité de solution pour résoudre le problème de "Listen to server side events" en React Native.		
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog articles card 3-->
-            <article class="post-articles" style="border-top: 2px solid #d96311;">
-                <div class="post-content">
-                    <time class="post-date" style="color: #d96311;">Stackoverflow</time>
-                    <div class="blog-post-title">
-                        <h5>
-                            <a data-id="2113" href="https://stackoverflow.com/questions/63384127/react-is-not-getting-installed/67000010#67000010" target="_blank" >
-                                React is not getting installed ?				
-                            </a>
-                        </h5>
-                    </div>
-                    <div class="blog-post-content">
-                       Apport de solution pour résoudre des possibilités de problèmes lors de la création d'un project React.js		
-                    </div>
-                </div>
-            </article>
-    
-           
-    
+        <div class="">
+            <div id="header">
+                <h2>Contributions</h2>
             </div>
+
+            <div class="blog-articles">
+
+                <!-- Blog articles card 4-->
+                <article class="post-articles" style="border-top: 2px solid #6e5494;">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #6e5494">Github</time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a data-id="2037" href="https://github.com/HarenaGit/laravel-websockets-without-vuejs"
+                                    target="_blank">
+                                    laravel-websockets-without-vuejs
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-articles" style="border-top: 2px solid #d96311;">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #d96311;">Stackoverflow</time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a data-id="2113"
+                                    href="https://stackoverflow.com/questions/43407521/using-laravel-echo-without-vue-js/68249864#68249864"
+                                    target="_blank">
+                                    USING LARAVEL ECHO WITHOUT VUE.JS ?
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-articles" style="border-top: 2px solid #d96311;">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #d96311;">Stackoverflow</time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a data-id="2113"
+                                    href="https://stackoverflow.com/questions/56654542/how-to-listen-to-server-side-events-in-react-native/59880269#59880269"
+                                    target="_blank">
+                                    HOW TO LISTEN TO SERVER SIDE EVENTS IN REACT NATIVE ?
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog articles card 3-->
+                <article class="post-articles" style="border-top: 2px solid #d96311;">
+                    <div class="post-content">
+                        <time class="post-date" style="color: #d96311;">Stackoverflow</time>
+                        <div class="blog-post-title">
+                            <h5>
+                                <a data-id="2113"
+                                    href="https://stackoverflow.com/questions/63384127/react-is-not-getting-installed/67000010#67000010"
+                                    target="_blank">
+                                    React is not getting installed ?
+                                </a>
+                            </h5>
+                        </div>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </div>
+
+
     </section>
 
 
-    <section id="section-skills" data-section="section-skills" >
+    <section id="section-skills" data-section="section-skills">
 
-        <div class="text-zone2" data-aos="fade-right" >
+        
+
+        <div class="text-zone2" data-aos="fade-right">
             <div id="header">
-                <h2>Compétences</h2>
+                <h2>Skills</h2>
             </div>
 
-            <p>Toutes ses années, je n'ai cessé de travailler pour progresser dans la grande culture qu'est le développement d'application informatique.
-                <br/><br>Voici une liste des technologies, outils et notions que j'ai experimenté dans mon parcours.
-                <br/><br>
-                Evidement la liste de mes compétences est longue à détailler, alors je n'ai listé que les plus indispensable.
-            </p>
+            <p>Here is my resume 👇 </p>
+            <div class="skills-grid-container">
+
+                <article class="pdf-container" style="border-top: 2px solid rgb(60, 179, 113);">
+                    <div class="post-content">
+                        <a href="./doc/cv.pdf" target="_blank" class="contact-button" style="margin-top:10px">
+                            <div>
+                                <span class="bg"></span>
+                                <span class="base"></span>
+                                <span class="text">
+                                    download
+                                </span>
+                            </div>
+                        </a>
+                        <br>
+                        <br><br>
+                        <object data="./doc/cv.pdf" type="application/pdf" width="100%" height="300px">
+                            <p class="error" style="font-size: 18px;">Votre Navigateur n'a pas de plugin PDF. Dommage :(
+                            </p>
+                        </object>
+
+                    </div>
+                </article>
+
+                <div class="skills-charts">
+                    <div id="myCanvasContainer">
+                        <canvas width="500" height="500" id="myCanvas">
+                            <ul id="tags">
+                                <li><a href="#" target="_blank">HTML</a></li>
+                                <li><a href="#" target="_blank">CSS</a></li>
+                                <li><a href="#" target="_blank">ES5</a></li>
+                                <li><a href="#" target="_blank">TypeScript</a></li>
+                                <li><a href="#" target="_blank">REST</a></li>
+                                <li><a href="#" target="_blank">JSON</a></li>
+                                <li><a href="#" target="_blank">Java</a></li>
+                                <li><a href="#" target="_blank">React.js</a></li>
+                                <li><a href="#" target="_blank">Firebase</a></li>
+                                <li><a href="#" target="_blank">PHP</a></li>
+                                <li><a href="#" target="_blank">Python</a></li>
+                                <li><a href="#" target="_blank">Node JS</a></li>
+                                <li><a href="#" target="_blank">Git</a></li>
+                                <li><a href="#" target="_blank">yarn</a></li>
+                                <li><a href="#" target="_blank">SASS</a></li>
+                                <li><a href="#" target="_blank">JQuery</a></li>
+                                <li><a href="#" target="_blank">SQL</a></li>
+                                <li><a href="#" target="_blank">MySQL</a></li>
+                                <li><a href="#" target="_blank">npm</a></li>
+                                <li><a href="#" target="_blank">Tensorflow</a></li>
+                                <li><a href="#" target="_blank">cloud dataflow</a></li>
+                                <li><a href="#" target="_blank">cloud functions</a></li>
+                                <li><a href="#" target="_blank">cloud Storage</a></li>
+                                <li><a href="#" target="_blank">Google Cloud kubernetes clusters</a></li>
+                                <li><a href="#" target="_blank">Docker</a></li>
+                                <li><a href="#" target="_blank">Jenkins</a></li>
+                                <li><a href="#" target="_blank">CARTO</a></li>
+                                <li><a href="#" target="_blank">react-google-maps</a></li>
+                                <li><a href="#" target="_blank">Gitlab</a></li>
+                            </ul>
+                        </canvas>
+                    </div>
+                </div>
+
+            </div>
             
         </div>
     </section>
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way " data-progress="animate" data-aos="fade-up" >
+    <!-- <section data-load="blog" id="section-blog" class="section-full section-blog js-way " data-progress="animate" data-aos="fade-up" >
 
         <div class="fake-big-2">.......</div>
     
-        <!-- blog articles wrapper -->
+        
         <div class="blog-articles">
             <article class="post-articles-variant" style="border-top: 2px solid #ffffff;">
                 <div class="post-content">
@@ -608,9 +752,9 @@
             </article>
     
         </div>
-    </section>
+    </section> -->
 
-    <section id="section-cv" data-section="section-cv" data-aos="fade-right" >
+    <!-- <section id="section-cv" data-section="section-cv" data-aos="fade-right" >
 
         <div class="text-zone2">
             <div id="header">
@@ -624,13 +768,13 @@
             </p>
             
         </div>
-    </section>
+    </section> -->
 
-    <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
+    <!-- <section data-load="blog" id="section-blog" class="section-full section-blog js-way" data-aos="fade-up" >
 
         <div class="fake-big-2">........</div>
     
-        <!-- blog articles wrapper -->
+       
         <div class="blog-articles">
     
             <article class="pdf-container" style="border-top: 2px solid #D6974C;">
@@ -654,81 +798,81 @@
             </article>
     
         </div>
-    </section>
+    </section> -->
 
- 
-   <section id="section-contact" data-section="section-contact"  >
 
-        <div class="text-zone3"  >
+    <section id="section-contact" data-section="section-contact">
+
+        <div class="text-zone3">
             <div id="header">
                 <h2>Contacts</h2>
-              
+
             </div>
 
-            <div id="contact-container" >
+            <div id="contact-container">
 
                 <p>
                     <i class="fa fa-phone"></i> :
                     +261 34 98 822 91
                 </p>
-                <br ><br>
+                <br><br>
                 <p>
                     <i class="fa fa-envelope"></i> :
                     nyharena.access5@gmail.com
                 </p>
-                <br ><br>
+                <br><br>
                 <p>
                     <i class="fa fa-map-marker"></i> :
                     IPS 65 Ambanilala Itaosy, Antananarivo, Madagascar
                 </p>
-               
+
             </div>
- 
-            <div  id="fake-big-3" >@</div>
-             
+
+            <div id="fake-big-3">@</div>
+
         </div>
-        
-        <div id="contact-map"  >
-                       
-            <img src="images/map1.png" style="width:100%; opacity: 0.8;"  id="image-map" >
+
+        <div id="contact-map">
+
+            <img src="images/map1.png" style="width:100%; opacity: 0.8;" id="image-map">
         </div>
     </section>
 
-   
+
     <div id="myModal" class="modal">
 
         <!-- The Close Button -->
         <span class="close">&times;</span>
-      
+
         <!-- Modal Content (The Image) -->
-        
+
         <div class="modal-container">
-          
-                <div class="modal-center">
-                    <div class="image-content" id="image-content" >
-                          <div class="slideshow-container" id="slideshow-container" >
 
-                          </div>
-                          <br>
-                          
-                          <!-- The dots/circles -->
-                          <div style="text-align:center" id="dot-menu" >
-                          </div>
+            <div class="modal-center">
+                <div class="image-content" id="image-content">
+                    <div class="slideshow-container" id="slideshow-container">
+
                     </div>
-                    <div class="detail-content">
-                        <div id="detail-content" class="detail" >
+                    <br>
 
-                        </div>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center" id="dot-menu">
                     </div>
                 </div>
+                <div class="detail-content">
+                    <div id="detail-content" class="detail">
+
+                    </div>
+                </div>
+            </div>
 
         </div>
-          
+
         <!-- Modal Caption (Image Text) -->
         <div id="caption"></div>
     </div>
 
-   
+
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
         $(window).on('load', () => {
@@ -747,13 +891,14 @@
     <script src="./js/imageSlide.js"></script>
     <script src="./js/modal.js"></script>
     <script>
-      
+
         document.addEventListener('DOMContentLoaded', (event) => {
             canvasInit();
             AOS.init();
         });
-        
+
     </script>
-    
+
 </body>
+
 </html>

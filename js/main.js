@@ -14,11 +14,11 @@ let mouseY;
 let selectedTheme = 0;
 let colorThemes = [
 	{
-		circle: '#D6974C',
-		line: '#D6974C',
+		circle: 'rgb(60, 179, 113)',
+		line: 'rgb(60, 179, 113)',
 		bg: '#ff124f',
-		shadowColor: '#D6974C',
-		pFont: '#D6974C',
+		shadowColor: 'rgb(60, 179, 113)',
+		pFont: 'rgb(60, 179, 113)',
 	},
 	{
 		circle: '#2f404d',
@@ -30,7 +30,7 @@ let colorThemes = [
 	{
 		circle: '#ff2a6d',
 		line: '#05d9e8',
-		bg: '#D6974C',
+		bg: 'rgb(60, 179, 113)',
 		shadowColor: '#ff2a6d',
 		pFont: '#ff2a6d',
 	},
@@ -44,7 +44,7 @@ let colorThemes = [
 	{
 		circle: '#ffffff',
 		line: '#ffffff',
-		bg: '#D6974C',
+		bg: 'rgb(60, 179, 113)',
 		shadowColor: '#ffffff',
 		pFont: '#ffffff',
 	},
