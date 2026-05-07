@@ -181,12 +181,24 @@ h1 {
 }
 
 .orbit-ring {
-  --orbit-radius: 235px;
+  --orbit-radius: 248px;
   position: absolute;
   inset: 0;
   border: 1px solid rgb(130 144 255 / 18%);
   border-radius: 50%;
   animation: spin 56s linear infinite;
+}
+
+.orbit-ring-inner {
+  --orbit-radius: 182px;
+  border-color: rgb(130 144 255 / 16%);
+  animation-duration: 48s;
+}
+
+.orbit-ring-outer {
+  --orbit-radius: 248px;
+  border-color: rgb(130 144 255 / 20%);
+  animation: spin-reverse 64s linear infinite;
 }
 
 .tech-node {
@@ -198,8 +210,8 @@ h1 {
     rotate(var(--angle))
     translateY(calc(var(--orbit-radius) * -1))
     rotate(calc(var(--angle) * -1));
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -208,8 +220,8 @@ h1 {
   background: linear-gradient(140deg, rgb(22 31 63 / 95%), rgb(15 23 49 / 96%));
   box-shadow: 0 12px 26px rgb(0 0 0 / 34%);
 }
-.tech-logo { width: 30px; height: 30px; object-fit: contain; }
-.tech-node--label span { font-size: 0.7rem; color: var(--text); }
+.tech-logo { width: 26px; height: 26px; object-fit: contain; }
+.tech-node--label span { font-size: 0.62rem; color: var(--text); }
 
 .hero-info-bubble {
   position: absolute;
@@ -288,8 +300,13 @@ h1 {
   .brand, .nav-links, .download-cv-btn { justify-self: center; }
   .hero-section { min-height: auto; padding-top: 1.4rem; }
   .orbit-scene { width: min(92vw, 420px); }
-  .orbit-ring { --orbit-radius: 196px; }
-  .tech-node { width: 54px; height: 54px; }
-  .tech-logo { width: 26px; height: 26px; }
+  .orbit-ring-inner { --orbit-radius: 148px; }
+  .orbit-ring-outer { --orbit-radius: 196px; }
+  .tech-node { width: 48px; height: 48px; }
+  .tech-logo { width: 22px; height: 22px; }
   .hero-info-bubble { right: 30%; top: 32%; }
+}
+
+@keyframes spin-reverse {
+  to { transform: rotate(-360deg); }
 }
