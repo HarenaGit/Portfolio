@@ -129,53 +129,144 @@
     </section>
 
     <section class="section reveal" id="experience">
-      <div class="works-header">
-        <div class="avatar-target-small" id="works-avatar-target"></div>
-        <h2>My works</h2>
+      <div class="works-sticky-wrapper">
+        <button class="timeline-nav prev" aria-label="Previous">←</button>
+        
+        <div class="works-header">
+          <div class="avatar-target-small" id="works-avatar-target"></div>
+          <h2>My works</h2>
+          <div class="works-tabs">
+            <button class="tab-btn active" data-tab="professional">Professional</button>
+            <button class="tab-btn" data-tab="personal">Personal</button>
+          </div>
+        </div>
+
+        <button class="timeline-nav next" aria-label="Next">→</button>
       </div>
-      <div class="cards-grid">
-        <article class="card">
-          <h3>Confirmed Fullstack Developer Java/React</h3>
-          <p class="meta">05/2022 - now | ETECH CONSULTING</p>
-          <p>
-            Contributed to analysis, architecture, development and maintenance of multiple web applications using
-            Java/Spring Boot, React, Google Cloud and Google Maps.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Intern - Web and Mobile Development</h3>
-          <p class="meta">11/2019 - 03/2020 | ASECNA Madagascar</p>
-          <p>
-            Worked on web/mobile applications for equipment management using Symfony, React and React Native.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Master's Degree in Engineering Sciences</h3>
-          <p class="meta">2022 | Ecole Nationale d'Informatique</p>
-          <p>Specialization in Software Engineering and Databases, graduated with high honors.</p>
-        </article>
+      <div id="professional-content" class="tab-content active">
+        <div class="timeline-wrapper">
+          <div class="canvas-timeline">
+            <!-- World Map Background (Dotted Tech Style) -->
+            <div class="world-map-overlay"></div>
+            
+            <!-- Central Axis with Year Labels -->
+            <div class="timeline-axis">
+              <span class="year-label" style="left: 200px;">NOW</span>
+              <span class="year-label" style="left: 700px;">2025</span>
+              <span class="year-label" style="left: 1200px;">2024</span>
+              <span class="year-label" style="left: 1700px;">2023</span>
+              <span class="year-label" style="left: 2200px;">2022</span>
+              <span class="year-label" style="left: 2700px;">2021</span>
+              <span class="year-label" style="left: 3200px;">2020</span>
+              <span class="year-label" style="left: 3700px;">2019</span>
+            </div>
+
+            <!-- Steps (Alternating) -->
+            <div class="canvas-steps">
+              <!-- NOW -->
+              <div class="canvas-step top" style="--step-color: #7080ff; left: 200px;">
+                <div class="step-box">
+                  <p class="company">ETECH CONSULTING</p>
+                  <p class="desc">Leading the design and implementation of scalable microservices architectures using Spring Boot.</p>
+                </div>
+              </div>
+
+              <!-- 2025 -->
+              <div class="canvas-step bottom" style="--step-color: #7080ff; left: 700px;">
+                <div class="step-box">
+                  <p class="company">ETECH CONSULTING</p>
+                  <p class="desc">Spearheading real-time mapping innovations with advanced React components and Cloud APIs.</p>
+                </div>
+              </div>
+
+              <!-- 2024 -->
+              <div class="canvas-step top" style="--step-color: #7080ff; left: 1200px;">
+                <div class="step-box">
+                  <p class="company">ETECH CONSULTING</p>
+                  <p class="desc">Managing complex cloud infrastructure on GCP ensuring 99.9% availability for enterprise apps.</p>
+                </div>
+              </div>
+
+              <!-- 2023 -->
+              <div class="canvas-step bottom" style="--step-color: #7080ff; left: 1700px;">
+                <div class="step-box">
+                  <p class="company">ETECH CONSULTING</p>
+                  <p class="desc">Driving technical excellence through rigorous code reviews and architectural mentoring.</p>
+                </div>
+              </div>
+
+              <!-- 2022 -->
+              <div class="canvas-step top" style="--step-color: #7080ff; left: 2200px;">
+                <div class="step-box">
+                  <p class="company">ETECH CONSULTING</p>
+                  <p class="desc">Successfully migrated legacy monolith systems to modular, testable micro-frontend architectures.</p>
+                </div>
+              </div>
+
+              <!-- 2021 -->
+              <div class="canvas-step bottom" style="--step-color: #4cd964; left: 2700px;">
+                <div class="step-box">
+                  <p class="company">ASECNA MADAGASCAR</p>
+                  <p class="desc">Finalized major database optimizations in PostgreSQL, improving data sync speed by 40%.</p>
+                </div>
+              </div>
+
+              <!-- 2020 -->
+              <div class="canvas-step top" style="--step-color: #4cd964; left: 3200px;">
+                <div class="step-box">
+                  <p class="company">ASECNA MADAGASCAR</p>
+                  <p class="desc">Launched a cross-platform mobile equipment tracking suite using React Native.</p>
+                </div>
+              </div>
+
+              <!-- 2019 -->
+              <div class="canvas-step bottom" style="--step-color: #4cd964; left: 3700px;">
+                <div class="step-box">
+                  <p class="company">ASECNA MADAGASCAR</p>
+                  <p class="desc">Developed full-stack internal admin tools with Symfony, automating weekly resource reporting.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div id="personal-content" class="tab-content">
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Top Mariage</h3>
+            <p class="meta">Laravel, React, Firebase</p>
+            <a href="https://www.topmariage.mg" target="_blank" rel="noreferrer">Visit project</a>
+          </article>
+          <article class="card">
+            <h3>Face.AI</h3>
+            <p class="meta">Node.js, React, TensorFlow</p>
+            <a href="https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing" target="_blank" rel="noreferrer">Watch demo</a>
+          </article>
+          <article class="card">
+            <h3>Geniusis</h3>
+            <p class="meta">Symfony, React, React Native</p>
+            <a href="https://www.asecna.aero/index.php/fr/" target="_blank" rel="noreferrer">Organization</a>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section reveal" id="projects">
       <h2>Skills</h2>
-      <div class="cards-grid">
-        <article class="card">
-          <h3>Top Mariage</h3>
-          <p class="meta">Laravel, React, Firebase Cloud Messaging</p>
-          <a href="https://www.topmariage.mg" target="_blank" rel="noreferrer">Visit project</a>
-        </article>
-        <article class="card">
-          <h3>Face.AI</h3>
-          <p class="meta">Node.js, React, TensorFlow</p>
-          <a href="https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing" target="_blank"
-            rel="noreferrer">Watch demo</a>
-        </article>
-        <article class="card">
-          <h3>Geniusis</h3>
-          <p class="meta">Symfony, React, React Native</p>
-          <a href="https://www.asecna.aero/index.php/fr/" target="_blank" rel="noreferrer">Organization</a>
-        </article>
+      <div class="skills-layout">
+        <div class="education-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-info">
+            <h3>Master's Degree in Engineering Sciences</h3>
+            <p class="meta">2022 | Ecole Nationale d'Informatique</p>
+            <p>Software Engineering & Databases · High Honors</p>
+          </div>
+        </div>
+        
+        <!-- You can add tech skills here later -->
       </div>
     </section>
 
