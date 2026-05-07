@@ -111,10 +111,10 @@ main { width: min(1240px, 96vw); margin: 0 auto; padding-bottom: 4rem; }
   inset: -8% -12%;
   pointer-events: none;
   background:
-     radial-gradient(circle at 50% 50%, transparent 38%, rgb(138 151 255 / 8%) 38.2%, transparent 38.4%),
-    radial-gradient(circle at 50% 50%, transparent 50%, rgb(138 151 255 / 7%) 50.2%, transparent 50.4%),
-    radial-gradient(circle at 50% 50%, transparent 62%, rgb(138 151 255 / 6%) 62.2%, transparent 62.4%);
-  mask-image: linear-gradient(to bottom, transparent 0%, transparent 42%, black 42%, black 78%, transparent 78%, transparent 100%);
+    radial-gradient(circle at 50% 70%, transparent 38%, rgb(138 151 255 / 8%) 38.2%, transparent 38.4%),
+    radial-gradient(circle at 50% 70%, transparent 50%, rgb(138 151 255 / 7%) 50.2%, transparent 50.4%),
+    radial-gradient(circle at 50% 70%, transparent 62%, rgb(138 151 255 / 6%) 62.2%, transparent 62.4%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 50%, black 50%, black 90%, transparent 90%, transparent 100%);
 }
 
 .hero-particle-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
@@ -140,6 +140,53 @@ h1 {
   margin: 0;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  box-shadow: 0 8px 20px -6px rgb(127 130 255 / 50%);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgb(127 130 255 / 70%);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-2);
+  transform: translateY(-3px);
+}
+
+
 .hero-search {
   display: inline-flex;
   align-items: center;
@@ -163,7 +210,7 @@ h1 {
   position: relative;
   width: min(68vw, 500px);
   aspect-ratio: 1 / 1;
-  margin-top: 0.8rem;
+  margin-top: 5rem;
 }
 
 .avatar-center {
@@ -186,19 +233,20 @@ h1 {
   inset: 0;
   border: 1px solid rgb(130 144 255 / 18%);
   border-radius: 50%;
-  animation: spin 56s linear infinite;
+  animation: spin 100s linear infinite;
+  pointer-events: none;
 }
 
 .orbit-ring-inner {
   --orbit-radius: 182px;
   border-color: rgb(130 144 255 / 16%);
-  animation-duration: 48s;
+  animation-duration: 80s;
 }
 
 .orbit-ring-outer {
   --orbit-radius: 248px;
   border-color: rgb(130 144 255 / 20%);
-  animation: spin-reverse 64s linear infinite;
+  animation: spin-reverse 120s linear infinite;
 }
 
 .tech-node {
@@ -219,6 +267,22 @@ h1 {
   border: 1px solid rgb(130 144 255 / 30%);
   background: linear-gradient(140deg, rgb(22 31 63 / 95%), rgb(15 23 49 / 96%));
   box-shadow: 0 12px 26px rgb(0 0 0 / 34%);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: auto;
+}
+
+.tech-node:hover {
+  border-color: var(--accent-2);
+  box-shadow: 
+    0 0 20px var(--accent),
+    0 0 40px rgb(127 130 255 / 30%);
+  transform: 
+    translate(-50%, -50%) 
+    rotate(var(--angle)) 
+    translateY(calc(var(--orbit-radius) * -1)) 
+    rotate(calc(var(--angle) * -1))
+    scale(1.1);
+  z-index: 10;
 }
 .tech-logo { width: 26px; height: 26px; object-fit: contain; }
 .tech-node--label span { font-size: 0.62rem; color: var(--text); }
@@ -299,7 +363,9 @@ h1 {
   .navbar { grid-template-columns: 1fr; gap: 0.75rem; justify-items: center; }
   .brand, .nav-links, .download-cv-btn { justify-self: center; }
   .hero-section { min-height: auto; padding-top: 1.4rem; }
-  .orbit-scene { width: min(92vw, 420px); }
+  .hero-actions { flex-direction: column; gap: 0.8rem; width: 100%; align-items: center; }
+  .btn { width: 100%; max-width: 280px; }
+  .orbit-scene { width: min(92vw, 420px); margin-top: 3rem; }
   .orbit-ring-inner { --orbit-radius: 148px; }
   .orbit-ring-outer { --orbit-radius: 196px; }
   .tech-node { width: 48px; height: 48px; }
