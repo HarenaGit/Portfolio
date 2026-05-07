@@ -56,8 +56,10 @@ function handleAvatarScroll() {
   
   // Animation bounds
   const startScroll = 0;
-  const endScroll = targetAbsoluteTop - (vh / 2) + (targetRect.height / 2);
+  // Dock slightly before the placeholder reaches the middle of the screen
+  const endScroll = targetAbsoluteTop - (vh * 0.6) + (targetRect.height / 2);
   const range = endScroll - startScroll;
+
   
   let progress = range > 0 ? Math.min(Math.max((scrollY - startScroll) / range, 0), 1) : (scrollY > 0 ? 1 : 0);
 
