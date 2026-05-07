@@ -35,11 +35,12 @@ body {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 1rem 5vw;
+  padding: 1.2rem 1.5rem;
   backdrop-filter: blur(10px);
   background: linear-gradient(180deg, rgb(4 6 18 / 96%), rgb(9 13 31 / 92%));
   border-bottom: 1px solid rgb(112 128 255 / 18%);
 }
+
 
 .brand {
   color: var(--text);
@@ -368,6 +369,21 @@ h1 {
   position: relative;
   border-radius: 50%;
 }
+
+.works-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.avatar-target-small {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: relative;
+}
+
 
 .avatar-tooltip {
   position: absolute;

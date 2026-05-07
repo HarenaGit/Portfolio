@@ -46,91 +46,115 @@ const orbitScene = document.querySelector(".orbit-scene");
 
 function handleAvatarScroll() {
   if (!avatar || !avatarTarget || !orbitScene) return;
+  const worksTarget = document.getElementById("works-avatar-target");
+  if (!worksTarget) return;
 
   const scrollY = window.scrollY;
   const vh = window.innerHeight;
   
-  // Get the absolute top position of the target
-  const targetRect = avatarTarget.getBoundingClientRect();
-  const targetAbsoluteTop = targetRect.top + scrollY;
-  
-  // Animation bounds
-  // Start animation exactly when the About H2 title enters the viewport
+  // Locations
   const aboutTitle = document.querySelector("#about h2");
-  const titleTop = aboutTitle ? aboutTitle.getBoundingClientRect().top + scrollY : 0;
-  const startScroll = Math.max(0, titleTop - vh);
+  const worksTitle = document.querySelector("#experience h2");
   
-  // Dock slightly before the placeholder reaches the middle of the screen
-  const endScroll = targetAbsoluteTop - (vh * 0.6) + (targetRect.height / 2);
-  const range = endScroll - startScroll;
+  const aboutTargetTop = avatarTarget.getBoundingClientRect().top + scrollY;
+  const worksTargetTop = worksTarget.getBoundingClientRect().top + scrollY;
+
+  // Segment 1: Hero -> About
+  const s1Start = Math.max(0, (aboutTitle.getBoundingClientRect().top + scrollY) - vh);
+  const s1End = aboutTargetTop - vh * 0.5;
+
+  // Segment 2: About -> Works
+  const s2Start = Math.max(s1End, (worksTitle.getBoundingClientRect().top + scrollY) - vh);
+  const s2End = worksTargetTop - vh * 0.5;
 
 
+  // Helper for easing
+  const ease = (p) => p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
 
-  
-  let progress = range > 0 ? Math.min(Math.max((scrollY - startScroll) / range, 0), 1) : (scrollY > 0 ? 1 : 0);
-
-  const orbitRect = orbitScene.getBoundingClientRect();
-
-  if (progress <= 0) {
-    // Reset to Hero
+  if (scrollY <= s1Start) {
+    // State: Hero
     avatar.style.position = "absolute";
     avatar.style.width = "54%";
     avatar.style.height = "54%";
     avatar.style.top = "23%";
     avatar.style.left = "23%";
     avatar.style.transform = "none";
-    if (avatar.parentElement !== orbitScene) {
-      orbitScene.prepend(avatar);
-    }
+    if (avatar.parentElement !== orbitScene) orbitScene.prepend(avatar);
     const tooltip = avatarTarget.querySelector(".avatar-tooltip");
     if (tooltip) tooltip.classList.remove("is-active");
-  } else if (progress >= 1) {
-    // Dock to About
+
+  } else if (scrollY <= s1End) {
+    // Transition: Hero -> About
+    if (avatar.parentElement !== document.body) document.body.appendChild(avatar);
+    avatar.style.position = "fixed";
+    avatar.style.zIndex = "100";
+    
+    const p = ease((scrollY - s1Start) / (s1End - s1Start));
+    const orbitRect = orbitScene.getBoundingClientRect();
+    const targetRect = avatarTarget.getBoundingClientRect();
+
+    const curW = (orbitRect.width * 0.54) + (targetRect.width - orbitRect.width * 0.54) * p;
+    const curX = (orbitRect.left + orbitRect.width * 0.23) + (targetRect.left - (orbitRect.left + orbitRect.width * 0.23)) * p;
+    const curY = (orbitRect.top + orbitRect.height * 0.23) + (targetRect.top - (orbitRect.top + orbitRect.height * 0.23)) * p;
+
+    avatar.style.width = `${curW}px`;
+    avatar.style.height = `${curW}px`;
+    avatar.style.left = `${curX}px`;
+    avatar.style.top = `${curY}px`;
+    avatar.style.transform = `rotate(${p * 15}deg)`;
+    
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.remove("is-active");
+
+  } else if (scrollY <= s2Start) {
+    // State: Docked at About
     avatar.style.position = "relative";
     avatar.style.width = "100%";
     avatar.style.height = "100%";
     avatar.style.top = "0";
     avatar.style.left = "0";
     avatar.style.transform = "none";
-    if (avatar.parentElement !== avatarTarget) {
-      avatarTarget.appendChild(avatar);
-    }
+    if (avatar.parentElement !== avatarTarget) avatarTarget.appendChild(avatar);
     const tooltip = avatarTarget.querySelector(".avatar-tooltip");
     if (tooltip) tooltip.classList.add("is-active");
-  } else {
-    // Transitioning (Fixed positioning)
-    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
-    if (tooltip) tooltip.classList.remove("is-active");
-    
-    if (avatar.parentElement !== document.body) {
-      document.body.appendChild(avatar);
-    }
-    
+
+  } else if (scrollY <= s2End) {
+    // Transition: About -> Works
+    if (avatar.parentElement !== document.body) document.body.appendChild(avatar);
     avatar.style.position = "fixed";
     avatar.style.zIndex = "100";
 
-    // Calculate current positions of start and end points relative to viewport
-    const sW = orbitRect.width * 0.54;
-    const sX = orbitRect.left + (orbitRect.width * 0.23);
-    const sY = orbitRect.top + (orbitRect.height * 0.23);
+    const p = ease((scrollY - s2Start) / (s2End - s2Start));
+    const targetRect = avatarTarget.getBoundingClientRect();
+    const worksRect = worksTarget.getBoundingClientRect();
 
-    const eW = targetRect.width;
-    const eX = targetRect.left;
-    const eY = targetRect.top;
-
-    // Interpolate
-    const curW = sW + (eW - sW) * progress;
-    const curX = sX + (eX - sX) * progress;
-    const curY = sY + (eY - sY) * progress;
+    const curW = targetRect.width + (worksRect.width - targetRect.width) * p;
+    const curX = targetRect.left + (worksRect.left - targetRect.left) * p;
+    const curY = targetRect.top + (worksRect.top - targetRect.top) * p;
 
     avatar.style.width = `${curW}px`;
     avatar.style.height = `${curW}px`;
     avatar.style.left = `${curX}px`;
     avatar.style.top = `${curY}px`;
-    // Add a slight rotation for flair
-    avatar.style.transform = `rotate(${progress * 15}deg)`;
+    avatar.style.transform = `rotate(${15 + p * 15}deg)`;
+    
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.remove("is-active");
+
+  } else {
+    // State: Docked at Works
+    avatar.style.position = "relative";
+    avatar.style.width = "100%";
+    avatar.style.height = "100%";
+    avatar.style.top = "0";
+    avatar.style.left = "0";
+    avatar.style.transform = "none";
+    if (avatar.parentElement !== worksTarget) worksTarget.appendChild(avatar);
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.remove("is-active");
   }
 }
+
 
 // Optimization: Use a scroll listener with requestAnimationFrame
 window.addEventListener("scroll", () => {
