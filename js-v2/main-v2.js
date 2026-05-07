@@ -55,10 +55,16 @@ function handleAvatarScroll() {
   const targetAbsoluteTop = targetRect.top + scrollY;
   
   // Animation bounds
-  const startScroll = 0;
+  // Start animation exactly when the About H2 title enters the viewport
+  const aboutTitle = document.querySelector("#about h2");
+  const titleTop = aboutTitle ? aboutTitle.getBoundingClientRect().top + scrollY : 0;
+  const startScroll = Math.max(0, titleTop - vh);
+  
   // Dock slightly before the placeholder reaches the middle of the screen
   const endScroll = targetAbsoluteTop - (vh * 0.6) + (targetRect.height / 2);
   const range = endScroll - startScroll;
+
+
 
   
   let progress = range > 0 ? Math.min(Math.max((scrollY - startScroll) / range, 0), 1) : (scrollY > 0 ? 1 : 0);
