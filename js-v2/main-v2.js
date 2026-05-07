@@ -66,6 +66,8 @@ function handleAvatarScroll() {
     if (avatar.parentElement !== orbitScene) {
       orbitScene.prepend(avatar);
     }
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.remove("is-active");
   } else if (progress >= 1) {
     // Dock to About
     avatar.style.position = "relative";
@@ -77,8 +79,13 @@ function handleAvatarScroll() {
     if (avatar.parentElement !== avatarTarget) {
       avatarTarget.appendChild(avatar);
     }
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.add("is-active");
   } else {
     // Transitioning (Fixed positioning)
+    const tooltip = avatarTarget.querySelector(".avatar-tooltip");
+    if (tooltip) tooltip.classList.remove("is-active");
+    
     if (avatar.parentElement !== document.body) {
       document.body.appendChild(avatar);
     }

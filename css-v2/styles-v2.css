@@ -322,7 +322,7 @@ h1 {
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 320px;
   gap: 4rem;
   align-items: center;
 }
@@ -332,6 +332,46 @@ h1 {
   aspect-ratio: 1 / 1;
   position: relative;
   border-radius: 50%;
+}
+
+.avatar-tooltip {
+  position: absolute;
+  top: -20px;
+  left: 65%;
+  transform: translateX(-50%) translateY(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.65rem 1.3rem;
+  border-radius: 14px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px) scale(0);
+  transform-origin: bottom left;
+  transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 150;
+  pointer-events: none;
+}
+
+.avatar-tooltip.is-active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.avatar-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 25%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.2);
 }
 
 #main-avatar {
