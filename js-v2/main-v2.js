@@ -3,16 +3,24 @@ const sections = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 // --- Reveal Observer ---
+let typewriterStarted = false;
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
+        
+        // Trigger typewriter for about section
+        if (entry.target.id === "about" && !typewriterStarted) {
+          typewriterStarted = true;
+          startAboutTypewriter();
+        }
       }
     });
   },
   { threshold: 0.2 }
 );
+
 revealElements.forEach((el) => revealObserver.observe(el));
 
 // --- Active Nav Observer ---
@@ -122,6 +130,44 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("resize", handleAvatarScroll);
 
+// --- Typewriter Implementation ---
+function startAboutTypewriter() {
+  const container = document.getElementById("about-typewriter");
+  if (!container) return;
+
+  const textLines = [
+    "Senior Fullstack Engineer specializing in scalable cloud-native architectures.",
+    "Deep expertise in Java, React, and high-performance system design.",
+    "Specialized in Google Cloud integration and advanced mapping technologies.",
+    "Driven by engineering excellence and solving complex business challenges."
+  ];
+
+
+  const fullText = textLines.join("\n\n");
+  let i = 0;
+  
+  // Add cursor
+  container.innerHTML = '<span class="typewriter-cursor"></span>';
+  const cursor = container.querySelector(".typewriter-cursor");
+
+  function type() {
+    if (i < fullText.length) {
+      const char = fullText.charAt(i);
+      const textNode = document.createTextNode(char);
+      container.insertBefore(textNode, cursor);
+      i++;
+      
+      // Significantly faster speed
+      let delay = char === "\n" ? 150 : (char === "," ? 50 : 15);
+      setTimeout(type, delay);
+
+    }
+  }
+
+  type();
+}
+
 // Run once on load
 window.addEventListener("load", handleAvatarScroll);
 handleAvatarScroll();
+
