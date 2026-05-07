@@ -140,6 +140,9 @@ function handleAvatarScroll() {
     
     const tooltip = avatarTarget.querySelector(".avatar-tooltip");
     if (tooltip) tooltip.classList.remove("is-active");
+    
+    const worksHeader = worksTarget.closest(".works-header");
+    if (worksHeader) worksHeader.classList.remove("is-active");
 
   } else {
     // State: Docked at Works
@@ -150,9 +153,14 @@ function handleAvatarScroll() {
     avatar.style.left = "0";
     avatar.style.transform = "none";
     if (avatar.parentElement !== worksTarget) worksTarget.appendChild(avatar);
+    
     const tooltip = avatarTarget.querySelector(".avatar-tooltip");
     if (tooltip) tooltip.classList.remove("is-active");
+
+    const worksHeader = worksTarget.closest(".works-header");
+    if (worksHeader) worksHeader.classList.add("is-active");
   }
+
 }
 
 
