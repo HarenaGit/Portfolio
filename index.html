@@ -48,7 +48,7 @@
       </div>
 
       <div class="orbit-scene reveal">
-        <img src="images/profileV2/avata3D.png" alt="Ny Harena avatar 3D" class="avatar-center">
+        <img src="images/profileV2/avata3D.png" alt="Ny Harena avatar 3D" class="avatar-center" id="main-avatar">
         <div class="orbit-ring orbit-ring-inner">
           <a class="tech-node" style="--angle: 0deg;" href="https://www.java.com/" target="_blank" rel="noreferrer"
             aria-label="Java">
@@ -113,14 +113,21 @@
     </section>
 
     <section class="section reveal" id="about">
-      <h2>About</h2>
-      <p>
-        Hi, I am Ny Harena, a confirmed Fullstack Developer with expertise in Java and React.
-        I am passionate about solving complex challenges with cloud and mapping technologies.
-      </p>
-      <p>
-        I continuously push for maintainable code, better performance, and reliable deployments.
-      </p>
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About</h2>
+          <p>
+            Hi, I am Ny Harena, a confirmed Fullstack Developer with expertise in Java and React.
+            I am passionate about solving complex challenges with cloud and mapping technologies.
+          </p>
+          <p>
+            I continuously push for maintainable code, better performance, and reliable deployments.
+          </p>
+        </div>
+        <div class="about-visual" id="about-avatar-target">
+          <!-- Avatar will move here on scroll -->
+        </div>
+      </div>
     </section>
 
     <section class="section reveal" id="experience">

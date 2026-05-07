@@ -314,15 +314,38 @@ h1 {
 }
 
 .section {
-  margin-top: 1.1rem;
-  padding: 2rem;
-  border-radius: 20px;
-  border: 1px solid rgb(120 138 255 / 16%);
-  background: linear-gradient(170deg, rgb(13 19 41 / 90%), rgb(10 15 32 / 96%));
+  margin-top: 4rem;
+  padding: 2rem 0;
 }
-.section h2 { margin: 0 0 1rem; font-size: clamp(1.5rem, 2.7vw, 2.1rem); }
-.section p { color: var(--muted); line-height: 1.7; }
-.section p { max-width: none; }
+.section h2 { margin: 0 0 1.5rem; font-size: clamp(1.5rem, 2.7vw, 2.1rem); }
+.section p { color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-visual {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border-radius: 50%;
+}
+
+#main-avatar {
+  transition: transform 0.1s ease-out;
+}
+
+#main-avatar.is-floating {
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  border-width: 2px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
 
 .cards-grid {
   display: grid;
@@ -330,10 +353,8 @@ h1 {
   gap: 1rem;
 }
 .card {
-  border: 1px solid rgb(120 138 255 / 18%);
-  border-radius: 14px;
-  padding: 1rem;
-  background: linear-gradient(170deg, rgb(20 28 58 / 80%), rgb(12 18 38 / 90%));
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
 }
 .card h3 { margin-top: 0; font-size: 1rem; }
 .card .meta { color: var(--accent-2); font-size: 0.83rem; }
@@ -365,13 +386,16 @@ h1 {
   .hero-section { min-height: auto; padding-top: 1.4rem; }
   .hero-actions { flex-direction: column; gap: 0.8rem; width: 100%; align-items: center; }
   .btn { width: 100%; max-width: 280px; }
-  .orbit-scene { width: min(92vw, 420px); margin-top: 3rem; }
-  .orbit-ring-inner { --orbit-radius: 148px; }
-  .orbit-ring-outer { --orbit-radius: 196px; }
-  .tech-node { width: 48px; height: 48px; }
-  .tech-logo { width: 22px; height: 22px; }
+  .orbit-scene { width: min(92vw, 320px); margin-top: 2rem; }
+  .orbit-ring-inner { --orbit-radius: 110px; }
+  .orbit-ring-outer { --orbit-radius: 150px; }
+  .tech-node { width: 42px; height: 42px; }
+  .tech-logo { width: 20px; height: 20px; }
   .hero-info-bubble { right: 30%; top: 32%; }
+  .about-container { grid-template-columns: 1fr; gap: 2rem; }
+  .about-visual { max-width: 280px; margin: 0 auto; }
 }
+
 
 @keyframes spin-reverse {
   to { transform: rotate(-360deg); }

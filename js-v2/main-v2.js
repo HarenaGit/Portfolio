@@ -2,6 +2,7 @@ const revealElements = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll(".nav-links a");
 
+// --- Reveal Observer ---
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -10,30 +11,110 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.2,
-  }
+  { threshold: 0.2 }
 );
+revealElements.forEach((el) => revealObserver.observe(el));
 
-revealElements.forEach((element) => revealObserver.observe(element));
-
+// --- Active Nav Observer ---
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("active", isActive);
+        });
       }
-
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${entry.target.id}`;
-        link.classList.toggle("active", isActive);
-      });
     });
   },
-  {
-    rootMargin: "-40% 0px -45% 0px",
-    threshold: 0.1,
-  }
+  { rootMargin: "-40% 0px -45% 0px", threshold: 0.1 }
 );
+sections.forEach((s) => sectionObserver.observe(s));
 
-sections.forEach((section) => sectionObserver.observe(section));
+// --- Avatar Scroll Animation ---
+const avatar = document.getElementById("main-avatar");
+const avatarTarget = document.getElementById("about-avatar-target");
+const orbitScene = document.querySelector(".orbit-scene");
+
+function handleAvatarScroll() {
+  if (!avatar || !avatarTarget || !orbitScene) return;
+
+  const scrollY = window.scrollY;
+  const vh = window.innerHeight;
+  
+  // Get the absolute top position of the target
+  const targetRect = avatarTarget.getBoundingClientRect();
+  const targetAbsoluteTop = targetRect.top + scrollY;
+  
+  // Animation bounds
+  const startScroll = 0;
+  const endScroll = targetAbsoluteTop - (vh / 2) + (targetRect.height / 2);
+  const range = endScroll - startScroll;
+  
+  let progress = range > 0 ? Math.min(Math.max((scrollY - startScroll) / range, 0), 1) : (scrollY > 0 ? 1 : 0);
+
+  const orbitRect = orbitScene.getBoundingClientRect();
+
+  if (progress <= 0) {
+    // Reset to Hero
+    avatar.style.position = "absolute";
+    avatar.style.width = "54%";
+    avatar.style.height = "54%";
+    avatar.style.top = "23%";
+    avatar.style.left = "23%";
+    avatar.style.transform = "none";
+    if (avatar.parentElement !== orbitScene) {
+      orbitScene.prepend(avatar);
+    }
+  } else if (progress >= 1) {
+    // Dock to About
+    avatar.style.position = "relative";
+    avatar.style.width = "100%";
+    avatar.style.height = "100%";
+    avatar.style.top = "0";
+    avatar.style.left = "0";
+    avatar.style.transform = "none";
+    if (avatar.parentElement !== avatarTarget) {
+      avatarTarget.appendChild(avatar);
+    }
+  } else {
+    // Transitioning (Fixed positioning)
+    if (avatar.parentElement !== document.body) {
+      document.body.appendChild(avatar);
+    }
+    
+    avatar.style.position = "fixed";
+    avatar.style.zIndex = "100";
+
+    // Calculate current positions of start and end points relative to viewport
+    const sW = orbitRect.width * 0.54;
+    const sX = orbitRect.left + (orbitRect.width * 0.23);
+    const sY = orbitRect.top + (orbitRect.height * 0.23);
+
+    const eW = targetRect.width;
+    const eX = targetRect.left;
+    const eY = targetRect.top;
+
+    // Interpolate
+    const curW = sW + (eW - sW) * progress;
+    const curX = sX + (eX - sX) * progress;
+    const curY = sY + (eY - sY) * progress;
+
+    avatar.style.width = `${curW}px`;
+    avatar.style.height = `${curW}px`;
+    avatar.style.left = `${curX}px`;
+    avatar.style.top = `${curY}px`;
+    // Add a slight rotation for flair
+    avatar.style.transform = `rotate(${progress * 15}deg)`;
+  }
+}
+
+// Optimization: Use a scroll listener with requestAnimationFrame
+window.addEventListener("scroll", () => {
+  requestAnimationFrame(handleAvatarScroll);
+});
+window.addEventListener("resize", handleAvatarScroll);
+
+// Run once on load
+window.addEventListener("load", handleAvatarScroll);
+handleAvatarScroll();
