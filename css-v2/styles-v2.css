@@ -452,14 +452,9 @@ h1 {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background: rgba(19, 28, 55, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   padding: 0.8rem 1.5rem;
   border-radius: 100px;
-  border: 1px solid rgba(112, 128, 255, 0.2);
   width: fit-content;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -2469,7 +2464,9 @@ h1 {
 }
 
 @media (max-width: 1100px) {
-  .center-labels-left, .center-labels-right {
+
+  .center-labels-left,
+  .center-labels-right {
     position: static;
     transform: none;
     text-align: center;
@@ -2477,15 +2474,25 @@ h1 {
     width: 100%;
     margin-bottom: 1rem;
   }
-  
+
   .graph-center {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
-  .center-labels-left { order: 1; margin: 0; }
-  .graph-center .circle { order: 2; }
-  .center-labels-right { order: 3; margin: 0; }
+
+  .center-labels-left {
+    order: 1;
+    margin: 0;
+  }
+
+  .graph-center .circle {
+    order: 2;
+  }
+
+  .center-labels-right {
+    order: 3;
+    margin: 0;
+  }
 }
 
 .graph-center .circle {
@@ -2554,20 +2561,21 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 3.5rem 2rem;
   }
-  
+
   .branch-column:nth-child(3n+1),
   .branch-column:nth-child(3n+3) {
     transform: none;
   }
-  
+
   .branch-column:nth-child(even) {
     transform: translateY(30px);
   }
-  
+
   /* Reset for 2-column grid to maintain organic feel */
   .branch-column:nth-child(2n) {
     transform: translateY(30px) translateX(10px);
   }
+
   .branch-column:nth-child(2n+1) {
     transform: translateY(0) translateX(-10px);
   }
@@ -2578,8 +2586,8 @@ h1 {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
-  .branch-column, 
+
+  .branch-column,
   .branch-column:nth-child(even),
   .branch-column:nth-child(2n),
   .branch-column:nth-child(2n+1) {
@@ -2778,6 +2786,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 .map-wrapper {
   width: 100%;
   position: relative;
@@ -2827,13 +2836,25 @@ h1 {
 }
 
 @keyframes mapReveal {
-  from { opacity: 0; }
-  to { opacity: 0.8; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
 }
 
 @keyframes mapPulse {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.4; }
+
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .map-pin {
