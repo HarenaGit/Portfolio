@@ -268,6 +268,38 @@ function startAboutTypewriter() {
   type();
 }
 
+// --- Works Selection Logic ---
+const selectionBtns = document.querySelectorAll(".selection-btn");
+const worksSection = document.getElementById("works");
+
+selectionBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const choice = btn.dataset.choice;
+    
+    // Fade out and remove selection state
+    if (worksSection) {
+      worksSection.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+      const selectionContainer = worksSection.querySelector(".works-selection-container");
+      if (selectionContainer) {
+        selectionContainer.style.opacity = "0";
+        selectionContainer.style.transform = "translateY(-20px)";
+        
+        setTimeout(() => {
+          worksSection.classList.remove("is-selecting");
+        }, 500);
+      } else {
+        worksSection.classList.remove("is-selecting");
+      }
+    }
+    
+    // Find the matching tab button and click it
+    const targetTabBtn = document.querySelector(`.tab-btn[data-tab="${choice}"]`);
+    if (targetTabBtn) {
+      targetTabBtn.click();
+    }
+  });
+});
+
 // --- Works Tab Switcher ---
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
