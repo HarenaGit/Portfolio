@@ -1,0 +1,179 @@
+{
+  "hero": {
+    "brand_name": "Ny Harena",
+    "eyebrow": "Hi 🖐️, I'm Ny Harena",
+    "title": "Software Engineer crafting cloud-native products.",
+    "description": "Focused on Java, React, cloud technologies, and map-based integrations.",
+    "cta_primary": "View My Work",
+    "cta_secondary": "About Me"
+  },
+  "about": {
+    "title": "About me",
+    "typewriter": [
+      "Senior Fullstack Engineer specializing in scalable cloud-native architectures.",
+      "Deep expertise in Java, React, and high-performance system design.",
+      "Specialized in Google Cloud integration and advanced mapping technologies.",
+      "Driven by engineering excellence and solving complex business challenges."
+    ],
+    "tooltip": "Wanna know me ?"
+  },
+  "works": {
+    "section_title": "My works",
+    "selection": {
+      "eyebrow": "Projects",
+      "title": "Choose from categories",
+      "pro_label": "PRO",
+      "pro_tag": "Professional",
+      "perso_label": "PERSO",
+      "perso_tag": "Personal",
+      "explore": "Click to explore ⮕"
+    },
+    "tabs": {
+      "pro": "Pro",
+      "perso": "Perso"
+    },
+    "professional": [
+      {
+        "id": "etech",
+        "period": "2022 - Now",
+        "company": "Etech consulting, part of Arkeup Group Paris",
+        "company_subtitle": "Digital Services Company based in Madagascar",
+        "role": "Software Engineer",
+        "role_subtitle": "JAVA, REACT, CLOUD, Maps technologies and AI solutions integration.",
+        "branches": [
+          {
+            "title": "Architecture",
+            "description": "Microservices design with Spring Boot and engineering leadership."
+          },
+          {
+            "title": "Design Patterns",
+            "description": "Advanced OOP patterns and clean code architecture implementation."
+          },
+          {
+            "title": "Cloud (GCP)",
+            "description": "Enterprise scale cloud-native management and reliability."
+          },
+          {
+            "title": "Serverless",
+            "description": "Event-driven functions and scalable serverless backend ecosystems."
+          },
+          {
+            "title": "Frontend",
+            "description": "Interactive interfaces with React, Next.js and advanced CSS."
+          },
+          {
+            "title": "Micro-frontends",
+            "description": "Orchestrating modular, independent UI units at enterprise scale."
+          },
+          {
+            "title": "Database",
+            "description": "Optimized data structures and high-performance querying."
+          },
+          {
+            "title": "SQL & NoSQL",
+            "description": "Expertise in PostgreSQL, MongoDB and Redis caching strategies."
+          },
+          {
+            "title": "Security",
+            "description": "Ensuring application integrity and secure data practices."
+          },
+          {
+            "title": "Auth & OAuth2",
+            "description": "Implementing Keycloak and Spring Security for enterprise apps."
+          },
+          {
+            "title": "DevOps",
+            "description": "CI/CD automation and infrastructure as code workflows."
+          },
+          {
+            "title": "Kubernetes",
+            "description": "Container orchestration and auto-scaling production systems."
+          },
+          {
+            "title": "Mobile",
+            "description": "Cross-platform mobile apps with React Native."
+          },
+          {
+            "title": "UX & Performance",
+            "description": "Optimizing mobile performance and native module integration."
+          },
+          {
+            "title": "Mentorship",
+            "description": "Guiding junior engineers and agile process refinement."
+          },
+          {
+            "title": "Agile Coaching",
+            "description": "Leading Scrum rituals and product roadmap prioritization."
+          }
+        ]
+      },
+      {
+        "id": "asecna",
+        "period": "2019 - 2020",
+        "company": "ASECNA",
+        "company_subtitle": "Agency for Aerial Navigation Safety in Africa and Madagascar",
+        "role": "Fullstack Developer",
+        "role_subtitle": "Java, PHP, JavaScript and Database Systems Management.",
+        "branches": [
+          {
+            "title": "Backend Dev",
+            "description": "Developing robust server-side logic using Java and PHP frameworks."
+          },
+          {
+            "title": "UI Implementation",
+            "description": "Crafting intuitive user interfaces with modern JavaScript and CSS."
+          },
+          {
+            "title": "Database Admin",
+            "description": "Managing and optimizing complex relational database structures."
+          },
+          {
+            "title": "System Integration",
+            "description": "Ensuring seamless communication between internal modules and external APIs."
+          }
+        ]
+      }
+    ],
+    "personal": [
+      {
+        "title": "Top Mariage",
+        "meta": "Laravel, React, Firebase",
+        "link": "https://www.topmariage.mg",
+        "label": "Visit project"
+      },
+      {
+        "title": "Face.AI",
+        "meta": "Node.js, React, TensorFlow",
+        "link": "https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing",
+        "label": "Watch demo"
+      },
+      {
+        "title": "Geniusis",
+        "meta": "Symfony, React, React Native",
+        "link": "https://www.asecna.aero/index.php/fr/",
+        "label": "Organization"
+      }
+    ]
+  },
+  "skills": {
+    "section_title": "Skills",
+    "education": {
+      "degree": "Master's Degree in Engineering Sciences",
+      "period": "2022 | Ecole Nationale d'Informatique",
+      "description": "Software Engineering & Databases · High Honors"
+    }
+  },
+  "contact": {
+    "section_title": "My Global Presence",
+    "section_subtitle": "Available for remote collaborations across all time zones.",
+    "location_title": "Antananarivo, Madagascar",
+    "email": "nyharena.access5@gmail.com",
+    "phone": "+261 34 98 822 91",
+    "status": "Active & Remote Ready",
+    "availability": "Full-time",
+    "cta": "Contact me"
+  },
+  "footer": {
+    "copyright": "© 2026 Ny Harena. All rights reserved."
+  }
+}

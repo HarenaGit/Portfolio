@@ -13,38 +13,46 @@
 </head>
 
 <body>
+  <div id="global-loader" class="global-loader">
+    <div class="loader-content">
+      <div class="loader-avatar-wrapper">
+        <img src="images/profileV2/avata3D.png" alt="Loading..." class="loader-avatar">
+      </div>
+      <div class="loader-bar-container">
+        <div class="loader-bar"></div>
+      </div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
   <header class="navbar">
     <a class="brand" href="#home">
       <img src="images/profileV2/avata3D.png" alt="Ny Harena avatar" class="brand-avatar">
-      <span>Ny Harena</span>
+      <span id="nav-brand-name"></span>
     </a>
     <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#works">Works</a>
-      <a href="#projects">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" id="nav-home"></a>
+      <a href="#about" id="nav-about"></a>
+      <a href="#works" id="nav-works"></a>
+      <a href="#projects" id="nav-skills"></a>
+      <a href="#contact" id="nav-contact"></a>
     </nav>
     <a class="download-cv-btn" href="doc/cv-v2.pdf" target="_blank" rel="noreferrer" download aria-label="Download CV">
       <span class="download-icon" aria-hidden="true">⬇</span>
-      <span>Resume</span>
+      <span id="nav-resume"></span>
     </a>
   </header>
 
   <main>
     <section class="hero-section" id="home">
-      <p class="eyebrow reveal">Hi 🖐️, I'm Ny Harena</p>
+      <p class="eyebrow reveal" id="hero-eyebrow"></p>
 
-      <h1 class="reveal">
-        Software Engineer crafting cloud-native products.
-      </h1>
+      <h1 class="reveal" id="hero-title"></h1>
 
-      <p class="hero-copy reveal">
-        Focused on Java, React, cloud technologies, and map-based integrations.
-      </p>
+      <p class="hero-copy reveal" id="hero-description"></p>
       <div class="hero-actions reveal">
-        <a href="#works" class="btn btn-primary">View My Work</a>
-        <a href="#about" class="btn btn-secondary">About Me</a>
+        <a href="#works" class="btn btn-primary" id="hero-cta-primary"></a>
+        <a href="#about" class="btn btn-secondary" id="hero-cta-secondary"></a>
       </div>
 
       <div class="orbit-scene reveal">
@@ -115,14 +123,14 @@
     <section class="section reveal" id="about">
       <div class="about-container">
         <div class="about-text">
-          <h2>About me</h2>
+          <h2 id="about-title"></h2>
           <div class="about-text-content" id="about-typewriter">
             <!-- Text will be typed here -->
           </div>
 
         </div>
         <div class="about-visual" id="about-avatar-target">
-          <div class="avatar-tooltip">Wanna know me ?</div>
+          <div class="avatar-tooltip" id="about-tooltip"></div>
           <!-- Avatar will move here on scroll -->
         </div>
       </div>
@@ -131,32 +139,32 @@
     <section class="section reveal is-selecting" id="works">
       <div class="works-sticky-wrapper">
         <div class="works-header">
-          <h2>My works</h2>
+          <h2 id="works-title"></h2>
           <div class="avatar-target-small" id="works-avatar-target"></div>
         </div>
       </div>
 
       <div class="works-selection-container">
         <div class="selection-header reveal">
-          <p class="eyebrow">Projects</p>
-          <h3>Choose from categories</h3>
+          <p class="eyebrow" id="works-selection-eyebrow"></p>
+          <h3 id="works-selection-title"></h3>
         </div>
 
         <div class="selection-grid">
           <button class="selection-btn pro-btn reveal" data-choice="professional">
             <div class="btn-content">
-              <span class="btn-tag">Professional</span>
-              <span class="btn-label">PRO</span>
-              <span class="btn-explore">Click to explore ⮕</span>
+              <span class="btn-tag" id="works-pro-tag"></span>
+              <span class="btn-label" id="works-pro-label"></span>
+              <span class="btn-explore" id="works-pro-explore"></span>
             </div>
             <span class="btn-glow"></span>
           </button>
 
           <button class="selection-btn perso-btn reveal" data-choice="personal">
             <div class="btn-content">
-              <span class="btn-tag">Personal</span>
-              <span class="btn-label">PERSO</span>
-              <span class="btn-explore">Click to explore ⮕</span>
+              <span class="btn-tag" id="works-perso-tag"></span>
+              <span class="btn-label" id="works-perso-label"></span>
+              <span class="btn-explore" id="works-perso-explore"></span>
             </div>
             <span class="btn-glow"></span>
           </button>
@@ -165,8 +173,8 @@
 
       <div class="works-tabs-sticky-wrapper">
         <div class="works-tabs">
-          <button class="tab-btn" data-tab="professional">Pro</button>
-          <button class="tab-btn" data-tab="personal">Perso</button>
+          <button class="tab-btn" data-tab="professional" id="tab-pro-btn"></button>
+          <button class="tab-btn" data-tab="personal" id="tab-perso-btn"></button>
         </div>
       </div>
 
@@ -193,15 +201,15 @@
 
           <div class="graph-top reveal">
             <div class="pill">
-              <span class="pill-date">2022 - Now</span>
+              <span class="pill-date" id="etech-period"></span>
             </div>
           </div>
 
           <div class="graph-center reveal">
             <div class="center-labels-left">
               <div class="label-group">
-                <span class="label-title">Etech consulting, part of Arkeup Group Paris</span>
-                <span class="label-subtitle">Digital Services Company based in Madagascar</span>
+                <span class="label-title" id="etech-company"></span>
+                <span class="label-subtitle" id="etech-company-subtitle"></span>
               </div>
             </div>
             <div class="circle">
@@ -209,8 +217,8 @@
             </div>
             <div class="center-labels-right">
               <div class="label-group">
-                <span class="label-title">Role: Software Engineer</span>
-                <span class="label-subtitle">JAVA, REACT, CLOUD, Maps technologies and AI solutions integration.</span>
+                <span class="label-title" id="etech-role"></span>
+                <span class="label-subtitle" id="etech-role-subtitle"></span>
               </div>
             </div>
           </div>
@@ -450,15 +458,15 @@
 
             <div class="graph-top reveal">
               <div class="pill">
-                <span class="pill-date">2019 - 2020</span>
+                <span class="pill-date" id="asecna-period"></span>
               </div>
             </div>
 
             <div class="graph-center reveal">
               <div class="center-labels-left">
                 <div class="label-group">
-                  <span class="label-title">ASECNA</span>
-                  <span class="label-subtitle">Agency for Aerial Navigation Safety in Africa and Madagascar</span>
+                  <span class="label-title" id="asecna-company"></span>
+                  <span class="label-subtitle" id="asecna-company-subtitle"></span>
                 </div>
               </div>
               <div class="circle asecna-circle">
@@ -466,8 +474,8 @@
               </div>
               <div class="center-labels-right">
                 <div class="label-group">
-                  <span class="label-title">Role: Fullstack Developer</span>
-                  <span class="label-subtitle">Java, PHP, JavaScript and Database Systems Management.</span>
+                  <span class="label-title" id="asecna-role"></span>
+                  <span class="label-subtitle" id="asecna-role-subtitle"></span>
                 </div>
               </div>
             </div>
@@ -549,36 +557,21 @@
 
 
         <div id="personal-content" class="tab-content">
-          <div class="cards-grid">
-            <article class="card reveal">
-              <h3>Top Mariage</h3>
-              <p class="meta">Laravel, React, Firebase</p>
-              <a href="https://www.topmariage.mg" target="_blank" rel="noreferrer">Visit project</a>
-            </article>
-            <article class="card reveal">
-              <h3>Face.AI</h3>
-              <p class="meta">Node.js, React, TensorFlow</p>
-              <a href="https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing"
-                target="_blank" rel="noreferrer">Watch demo</a>
-            </article>
-            <article class="card reveal">
-              <h3>Geniusis</h3>
-              <p class="meta">Symfony, React, React Native</p>
-              <a href="https://www.asecna.aero/index.php/fr/" target="_blank" rel="noreferrer">Organization</a>
-            </article>
+          <div class="cards-grid" id="personal-projects-grid">
+            <!-- Populated by JS -->
           </div>
         </div>
     </section>
 
     <section class="section reveal" id="projects">
-      <h2>Skills</h2>
+      <h2 id="skills-title"></h2>
       <div class="skills-layout">
         <div class="education-card">
           <div class="edu-icon">🎓</div>
           <div class="edu-info">
-            <h3>Master's Degree in Engineering Sciences</h3>
-            <p class="meta">2022 | Ecole Nationale d'Informatique</p>
-            <p>Software Engineering & Databases · High Honors</p>
+            <h3 id="edu-degree"></h3>
+            <p class="meta" id="edu-period"></p>
+            <p id="edu-desc"></p>
           </div>
         </div>
 
@@ -590,8 +583,8 @@
     <section class="section reveal" id="contact">
       <div class="contact-container">
         <header class="contact-header">
-          <h2>My Global Presence</h2>
-          <p>Available for remote collaborations across all time zones.</p>
+          <h2 id="contact-title"></h2>
+          <p id="contact-subtitle"></p>
         </header>
 
         <div class="contact-stats">
@@ -650,16 +643,16 @@
                 <div class="pin-dot"></div>
                 <div class="pin-info-card">
                   <div class="pin-card-header">
-                    <h3>Antananarivo, Madagascar</h3>
-                    <div id="local-time" class="pin-time">Loading...</div>
+                    <h3 id="contact-location-title"></h3>
+                    <div id="local-time" class="pin-time"></div>
                   </div>
                   <ul>
-                    <li><strong>Email: </strong> nyharena.access5@gmail.com</li>
-                    <li><strong>Phone:</strong> +261 34 98 822 91</li>
-                    <li><strong>Status:</strong> Active & Remote Ready</li>
-                    <li><strong>Availability:</strong> Full-time</li>
+                    <li><strong>Email: </strong> <span id="contact-email"></span></li>
+                    <li><strong>Phone:</strong> <span id="contact-phone"></span></li>
+                    <li><strong>Status:</strong> <span id="contact-status"></span></li>
+                    <li><strong>Availability:</strong> <span id="contact-availability"></span></li>
                   </ul>
-                  <a href="mailto:nyharena.access5@gmail.com" class="contact-mini-btn">Contact me</a>
+                  <a href="mailto:nyharena.access5@gmail.com" class="contact-mini-btn" id="contact-cta"></a>
                 </div>
               </div>
             </div>
@@ -675,7 +668,7 @@
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-left">
-        <span>© 2026 Ny Harena. All rights reserved.</span>
+        <span id="footer-copyright"></span>
       </div>
       <div class="footer-right">
         <div class="social-links">
