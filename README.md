@@ -3,11 +3,10 @@
 A premium, high-performance portfolio website built with a data-driven architecture. This project focuses on speed, maintainability, and advanced visual aesthetics.
 
 ## 🛠️ Technologies
-- **Core**: Semantic HTML5 & Vanilla JavaScript (ES6+).
-- **Styling**: Modern CSS3 with Vanilla variables, Glassmorphism, and complex keyframe animations.
-- **Architecture**: Data-driven UI via externalized **JSON** configuration.
-- **Interactions**: Intersection Observer API for scroll-triggered reveals and dynamic navigation tracking.
-- **Design**: Premium Dark Mode, 3D Avatar integration, and smooth UI transitions.
+
+| 🏗️ Core | 🎨 Styling | 🧠 Logic | 📊 Data |
+| :--- | :--- | :--- | :--- |
+| **HTML5**<br>Semantic structure for high-end SEO & accessibility. | **Modern CSS3**<br>Vanilla variables, Glassmorphism & Keyframe animations. | **JavaScript ES6+**<br>Asynchronous fetching & Intersection Observer API. | **JSON Storage**<br>Externalized data for easy & dynamic content updates. |
 
 ## 📦 Getting Started
 
@@ -25,11 +24,20 @@ Then open the provided local URL (usually `http://localhost:8080`) in your brows
 
 ## 📂 Project Structure
 
-- `index.html`: Core structure and SEO-optimized semantic markup.
-- `PortfolioData.json`: **The single source of truth** for all portfolio content.
-- `js-v2/main-v2.js`: Logic for data fetching, DOM population, and complex scroll animations.
-- `css-v2/styles-v2.css`: Premium design tokens and component styling.
-- `images/`: Optimized assets (logos, avatars, and maps).
+```text
+.
+├── index.html              # Main entrance and semantic structure
+├── index.old.html          # Legacy version kept for reference
+├── PortfolioData.json      # Central data repository (Single source of truth)
+├── README.md               # Documentation and setup guide
+├── css-v2/
+│   └── styles-v2.css       # Premium design tokens & modern animations
+├── js-v2/
+│   └── main-v2.js          # Logic: data fetching, DOM mapping, scroll effects
+├── images/                 # Optimized visual assets (Logos, 3D Avatars)
+└── doc/
+    └── cv-v2.pdf           # Professional Resume/CV
+```
 
 ## ⚙️ Content Management (`PortfolioData.json`)
 
@@ -55,18 +63,23 @@ sequenceDiagram
     participant D as DOM Elements
 
     B->>JS: DOMContentLoaded
-    JS->>B: Show Global Loader
+    JS->>JS: fetchPortfolioData()
+    JS->>JS: setStaticTexts()
+    Note right of JS: Load immediate UI (Navbar)
     JS->>JSON: fetch('PortfolioData.json')
     alt Success
-        JSON-->>JS: Return JSON Data
-        JS->>D: applyPortfolioData()
-        Note over JS,D: Map IDs to JSON values
-        JS->>B: hideLoader()
-        B->>B: Reveal Content (Fade Out)
+        JSON-->>JS: Return JSON
+        JS->>JS: applyPortfolioData()
+        loop For each Data Key
+            JS->>JS: setElText(id, text)
+            JS->>D: Update TextContent
+        end
+        JS->>JS: hideLoader()
+        JS->>B: Reveal Content (Fade Out)
     else Failure
         JSON-->>JS: Error (404/CORS)
-        JS->>B: hideLoader() (Fallback)
-        Note over B: Show static elements
+        JS->>JS: hideLoader()
+        Note over B: Fallback to static elements
     end
 ```
 
