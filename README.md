@@ -41,5 +41,9 @@ All text content is externalized to ensure the portfolio is easy to update witho
 
 The system includes a **Global Loading Screen** that ensures all data is fully loaded and applied before revealing the page to the user, providing a professional and seamless experience.
 
+## 🚀 Portfolio link
+
+[https://harenagit.github.io/Portfolio/](https://harenagit.github.io/Portfolio/)
+
 ---
 *Created with ❤️ Ny Harena *
