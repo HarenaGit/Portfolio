@@ -2416,8 +2416,7 @@ h1 {
 }
 
 .pill-date {
-  font-size: 0.75rem;
-  color: #ff7b7b;
+  color: var(--accent-2);
   font-weight: 700;
 }
 
@@ -2492,14 +2491,14 @@ h1 {
 .graph-center .circle {
   width: 120px;
   height: 120px;
-  background: #1a1515;
-  border: 8px solid #2a2222;
+  background: var(--panel);
+  border: 8px solid var(--panel-soft);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow:
-    0 0 40px rgba(255, 123, 123, 0.2),
+    0 0 40px rgba(89, 185, 255, 0.2),
     inset 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -2508,7 +2507,7 @@ h1 {
   content: '';
   position: absolute;
   inset: -12px;
-  border: 1px solid rgba(255, 123, 123, 0.3);
+  border: 1px solid rgba(89, 185, 255, 0.3);
   border-radius: 50%;
 }
 
@@ -2589,8 +2588,8 @@ h1 {
 }
 
 .branch-card {
-  background: rgba(26, 21, 21, 0.8);
-  border: 1px solid rgba(255, 123, 123, 0.2);
+  background: var(--panel-soft);
+  border: 1px solid rgba(89, 185, 255, 0.2);
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -2610,17 +2609,17 @@ h1 {
   transform: translateX(-50%);
   width: 16px;
   height: 16px;
-  background: #1a1515;
-  border: 2px solid #ff7b7b;
+  background: var(--bg);
+  border: 2px solid var(--accent-2);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 123, 123, 0.6);
+  box-shadow: 0 0 10px rgba(89, 185, 255, 0.6);
   z-index: 11;
 }
 
 .branch-path-v {
   width: 0;
   height: 2rem;
-  border-left: 2px dashed rgba(255, 123, 123, 0.4);
+  border-left: 2px dashed rgba(89, 185, 255, 0.4);
   margin: 0.5rem 0;
 }
 
@@ -2633,16 +2632,16 @@ h1 {
 }
 
 .branch-card:hover {
-  border-color: #ff7b7b;
+  border-color: var(--accent-2);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 123, 123, 0.1);
+  box-shadow: 0 10px 30px rgba(89, 185, 255, 0.1);
 }
 
 .branch-icon {
-  color: #ff7b7b;
+  color: var(--accent-2);
   width: 40px;
   height: 40px;
-  filter: drop-shadow(0 0 8px rgba(255, 123, 123, 0.4));
+  filter: drop-shadow(0 0 8px rgba(89, 185, 255, 0.4));
 }
 
 .branch-content h4 {
@@ -2674,10 +2673,10 @@ h1 {
 
 .connector-line {
   fill: none;
-  stroke: #ff7b7b;
+  stroke: var(--accent-2);
   stroke-width: 2;
   stroke-dasharray: 6 4;
-  filter: drop-shadow(0 0 5px rgba(255, 123, 123, 0.8));
+  filter: drop-shadow(0 0 5px rgba(89, 185, 255, 0.8));
   stroke-dashoffset: 100;
   animation: dash 5s linear infinite;
 }
@@ -2689,8 +2688,8 @@ h1 {
 }
 
 .connector-dot {
-  fill: #ff7b7b;
-  filter: drop-shadow(0 0 3px rgba(255, 123, 123, 1));
+  fill: var(--accent-2);
+  filter: drop-shadow(0 0 3px rgba(89, 185, 255, 1));
 }
 
 @media (max-width: 900px) {
@@ -2768,7 +2767,7 @@ h1 {
 .stat-value {
   font-size: 3rem;
   font-weight: 700;
-  color: #ff7b7b;
+  color: var(--accent-2);
   margin-bottom: 0.5rem;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -2836,9 +2835,9 @@ h1 {
 .pin-dot {
   width: 12px;
   height: 12px;
-  background: #ff7b7b;
+  background: var(--accent-2);
   border-radius: 50%;
-  box-shadow: 0 0 15px #ff7b7b;
+  box-shadow: 0 0 15px var(--accent-2);
   cursor: pointer;
 }
 
@@ -2849,7 +2848,7 @@ h1 {
   transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
-  border: 2px solid #ff7b7b;
+  border: 2px solid var(--accent-2);
   border-radius: 50%;
   animation: pulse 2s ease-out infinite;
   pointer-events: none;
@@ -2875,8 +2874,8 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   width: 260px;
-  background: rgba(26, 21, 21, 0.98);
-  border: 1px solid rgba(255, 123, 123, 0.4);
+  background: var(--panel-soft);
+  border: 1px solid rgba(89, 185, 255, 0.4);
   border-radius: 12px;
   padding: 1.5rem;
   backdrop-filter: blur(15px);
@@ -2896,7 +2895,7 @@ h1 {
   transform: translateX(-50%);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid rgba(255, 123, 123, 0.3);
+  border-top: 10px solid rgba(89, 185, 255, 0.3);
 }
 
 .pin-info-card h3 {
@@ -2915,7 +2914,7 @@ h1 {
 
 .pin-time {
   font-size: 0.85rem;
-  color: #ff7b7b;
+  color: var(--accent-2);
   font-weight: 700;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -2942,7 +2941,7 @@ h1 {
   display: block;
   width: 100%;
   padding: 0.6rem;
-  background: #ff7b7b;
+  background: var(--accent-2);
   color: white;
   text-align: center;
   border-radius: 6px;
