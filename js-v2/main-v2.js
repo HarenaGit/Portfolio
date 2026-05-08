@@ -284,3 +284,27 @@ handleAvatarScroll();
 updateActiveNavByScroll();
 
 
+
+// --- Madagascar Real-time Clock ---
+function updateMadagascarTime() {
+  const timeElement = document.querySelector("#local-time");
+  if (!timeElement) return;
+
+  const now = new Date();
+  const options = {
+    timeZone: 'Indian/Antananarivo',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+  
+  const formatter = new Intl.DateTimeFormat('en-GB', options);
+  timeElement.textContent = formatter.format(now);
+}
+
+setInterval(updateMadagascarTime, 1000);
+updateMadagascarTime();
