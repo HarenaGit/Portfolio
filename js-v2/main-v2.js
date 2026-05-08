@@ -16,6 +16,26 @@ const revealObserver = new IntersectionObserver(
           startAboutTypewriter();
         }
       }
+
+      // Handle works header visibility when skills section is near
+      if (entry.target.id === "projects") {
+        const worksHeader = document.querySelector(".works-sticky-wrapper");
+        if (worksHeader) {
+          if (entry.isIntersecting) {
+            worksHeader.style.opacity = "0";
+            worksHeader.style.visibility = "hidden";
+            worksHeader.style.pointerEvents = "none";
+          } else {
+            // Only show it if we are above the skills section
+            const rect = entry.target.getBoundingClientRect();
+            if (rect.top > 0) {
+              worksHeader.style.opacity = "1";
+              worksHeader.style.visibility = "visible";
+              worksHeader.style.pointerEvents = "auto";
+            }
+          }
+        }
+      }
     });
   },
   { threshold: 0.2 }
@@ -261,7 +281,8 @@ function observeRoadmapItems() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          roadmapObserver.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("is-visible");
         }
       });
     },
@@ -269,7 +290,8 @@ function observeRoadmapItems() {
   );
 
   roadmapItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 60, 320)}ms`;
+    item.classList.remove("is-visible");
+    item.style.transitionDelay = `${index * 100}ms`;
     roadmapObserver.observe(item);
   });
 }

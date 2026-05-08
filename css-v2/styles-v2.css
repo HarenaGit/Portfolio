@@ -432,6 +432,7 @@ h1 {
   top: 100px;
   height: 0;
   z-index: 500;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -2459,9 +2460,9 @@ h1 {
 .graph-branches {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 4rem 2.5rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 3rem;
   z-index: 10;
 }
 
@@ -2470,6 +2471,58 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+/* Organic, non-ordered layout */
+.branch-column:nth-child(even) {
+  transform: translateY(40px);
+}
+
+.branch-column:nth-child(3n+1) {
+  transform: translateX(-15px);
+}
+
+.branch-column:nth-child(3n+3) {
+  transform: translateX(15px);
+}
+
+@media (max-width: 1024px) {
+  .graph-branches {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 2rem;
+  }
+  
+  .branch-column:nth-child(3n+1),
+  .branch-column:nth-child(3n+3) {
+    transform: none;
+  }
+  
+  .branch-column:nth-child(even) {
+    transform: translateY(30px);
+  }
+  
+  /* Reset for 2-column grid to maintain organic feel */
+  .branch-column:nth-child(2n) {
+    transform: translateY(30px) translateX(10px);
+  }
+  .branch-column:nth-child(2n+1) {
+    transform: translateY(0) translateX(-10px);
+  }
+}
+
+@media (max-width: 650px) {
+  .graph-branches {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .branch-column, 
+  .branch-column:nth-child(even),
+  .branch-column:nth-child(2n),
+  .branch-column:nth-child(2n+1) {
+    transform: none;
+  }
 }
 
 .branch-card {
@@ -2499,6 +2552,13 @@ h1 {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255, 123, 123, 0.6);
   z-index: 11;
+}
+
+.branch-path-v {
+  width: 0;
+  height: 2rem;
+  border-left: 2px dashed rgba(255, 123, 123, 0.4);
+  margin: 0.5rem 0;
 }
 
 .branch-label {
