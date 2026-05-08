@@ -21,7 +21,7 @@
     <nav class="nav-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#experience">Works</a>
+      <a href="#works">Works</a>
       <a href="#projects">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -33,18 +33,18 @@
 
   <main>
     <section class="hero-section" id="home">
-      <p class="eyebrow reveal">Software Engineer · Java / React / Cloud</p>
+      <p class="eyebrow reveal">Hi 🖐️, I'm Ny Harena</p>
 
-      <h1 class="reveal">Building scalable cloud-native products.</h1>
+      <h1 class="reveal">
+        Software Engineer crafting cloud-native products.
+      </h1>
 
       <p class="hero-copy reveal">
-        Focused on building scalable Java and React applications, cloud-native systems, and map-based
-        experiences.
+        Focused on Java, React, cloud technologies, and map-based integrations.
       </p>
-
       <div class="hero-actions reveal">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        <a href="#works" class="btn btn-primary">View My Work</a>
+        <a href="#about" class="btn btn-secondary">About Me</a>
       </div>
 
       <div class="orbit-scene reveal">
@@ -128,104 +128,89 @@
       </div>
     </section>
 
-    <section class="section reveal" id="experience">
+    <section class="section reveal" id="works">
       <div class="works-sticky-wrapper">
-        <button class="timeline-nav prev" aria-label="Previous">←</button>
-        
         <div class="works-header">
-          <div class="avatar-target-small" id="works-avatar-target"></div>
           <h2>My works</h2>
+          <div class="avatar-target-small" id="works-avatar-target"></div>
           <div class="works-tabs">
-            <button class="tab-btn active" data-tab="professional">Professional</button>
-            <button class="tab-btn" data-tab="personal">Personal</button>
+            <button class="tab-btn active" data-tab="professional">Pro</button>
+            <button class="tab-btn" data-tab="personal">Perso</button>
           </div>
         </div>
-
-        <button class="timeline-nav next" aria-label="Next">→</button>
       </div>
       <div id="professional-content" class="tab-content active">
         <div class="timeline-wrapper">
-          <div class="canvas-timeline">
-            <!-- Central Axis with Year Labels -->
+          <div class="zigzag-roadmap" aria-label="Professional zigzag roadmap">
+            <svg class="zigzag-road-core" viewBox="0 0 900 1200" preserveAspectRatio="none" aria-hidden="true">
+              <path class="road-base" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
+              <path class="road-edge" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
+              <path class="road-centerline" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
+            </svg>
 
-            <div class="timeline-axis">
-              <span class="year-label" style="left: 200px;">NOW</span>
-              <span class="year-label" style="left: 700px;">2025</span>
-              <span class="year-label" style="left: 1200px;">2024</span>
-              <span class="year-label" style="left: 1700px;">2023</span>
-              <span class="year-label" style="left: 2200px;">2022</span>
-              <span class="year-label" style="left: 2700px;">2021</span>
-              <span class="year-label" style="left: 3200px;">2020</span>
-              <span class="year-label" style="left: 3700px;">2019</span>
-            </div>
-
-            <!-- Steps (Alternating) -->
-            <div class="canvas-steps">
-              <!-- NOW -->
-              <div class="canvas-step top" style="--step-color: #7080ff; left: 200px;">
-                <div class="step-box">
-                  <p class="company">ETECH CONSULTING</p>
-                  <p class="desc">Leading the design and implementation of scalable microservices architectures using Spring Boot.</p>
-                </div>
+            <article class="zigzag-milestone left reveal-on-scroll">
+              <span class="zigzag-dot">NOW</span>
+              <div class="zigzag-content">
+                <h3>ETECH CONSULTING</h3>
+                <p>Microservices architecture leadership with Spring Boot.</p>
               </div>
+            </article>
 
-              <!-- 2025 -->
-              <div class="canvas-step bottom" style="--step-color: #7080ff; left: 700px;">
-                <div class="step-box">
-                  <p class="company">ETECH CONSULTING</p>
-                  <p class="desc">Spearheading real-time mapping innovations with advanced React components and Cloud APIs.</p>
-                </div>
+            <article class="zigzag-milestone right reveal-on-scroll">
+              <span class="zigzag-dot">2025</span>
+              <div class="zigzag-content">
+                <h3>ETECH CONSULTING</h3>
+                <p>Realtime mapping innovations with advanced React and cloud APIs.</p>
               </div>
+            </article>
 
-              <!-- 2024 -->
-              <div class="canvas-step top" style="--step-color: #7080ff; left: 1200px;">
-                <div class="step-box">
-                  <p class="company">ETECH CONSULTING</p>
-                  <p class="desc">Managing complex cloud infrastructure on GCP ensuring 99.9% availability for enterprise apps.</p>
-                </div>
+            <article class="zigzag-milestone left reveal-on-scroll">
+              <span class="zigzag-dot">2024</span>
+              <div class="zigzag-content">
+                <h3>ETECH CONSULTING</h3>
+                <p>Managed GCP services and reliability at enterprise scale.</p>
               </div>
+            </article>
 
-              <!-- 2023 -->
-              <div class="canvas-step bottom" style="--step-color: #7080ff; left: 1700px;">
-                <div class="step-box">
-                  <p class="company">ETECH CONSULTING</p>
-                  <p class="desc">Driving technical excellence through rigorous code reviews and architectural mentoring.</p>
-                </div>
+            <article class="zigzag-milestone right reveal-on-scroll">
+              <span class="zigzag-dot">2023</span>
+              <div class="zigzag-content">
+                <h3>ETECH CONSULTING</h3>
+                <p>Drove code quality, reviews, and engineering mentorship.</p>
               </div>
+            </article>
 
-              <!-- 2022 -->
-              <div class="canvas-step top" style="--step-color: #7080ff; left: 2200px;">
-                <div class="step-box">
-                  <p class="company">ETECH CONSULTING</p>
-                  <p class="desc">Successfully migrated legacy monolith systems to modular, testable micro-frontend architectures.</p>
-                </div>
+            <article class="zigzag-milestone left reveal-on-scroll">
+              <span class="zigzag-dot">2022</span>
+              <div class="zigzag-content">
+                <h3>ETECH CONSULTING</h3>
+                <p>Migrated monolith frontend to modular micro-frontends.</p>
               </div>
+            </article>
 
-              <!-- 2021 -->
-              <div class="canvas-step bottom" style="--step-color: #4cd964; left: 2700px;">
-                <div class="step-box">
-                  <p class="company">ASECNA MADAGASCAR</p>
-                  <p class="desc">Finalized major database optimizations in PostgreSQL, improving data sync speed by 40%.</p>
-                </div>
+            <article class="zigzag-milestone right reveal-on-scroll">
+              <span class="zigzag-dot">2021</span>
+              <div class="zigzag-content">
+                <h3>ASECNA MADAGASCAR</h3>
+                <p>PostgreSQL sync optimization and major data performance gains.</p>
               </div>
+            </article>
 
-              <!-- 2020 -->
-              <div class="canvas-step top" style="--step-color: #4cd964; left: 3200px;">
-                <div class="step-box">
-                  <p class="company">ASECNA MADAGASCAR</p>
-                  <p class="desc">Launched a cross-platform mobile equipment tracking suite using React Native.</p>
-                </div>
+            <article class="zigzag-milestone left reveal-on-scroll">
+              <span class="zigzag-dot">2020</span>
+              <div class="zigzag-content">
+                <h3>ASECNA MADAGASCAR</h3>
+                <p>Launched cross-platform equipment tracking with React Native.</p>
               </div>
+            </article>
 
-              <!-- 2019 -->
-              <div class="canvas-step bottom" style="--step-color: #4cd964; left: 3700px;">
-                <div class="step-box">
-                  <p class="company">ASECNA MADAGASCAR</p>
-                  <p class="desc">Developed full-stack internal admin tools with Symfony, automating weekly resource reporting.</p>
-                </div>
+            <article class="zigzag-milestone right reveal-on-scroll">
+              <span class="zigzag-dot">2019</span>
+              <div class="zigzag-content">
+                <h3>ASECNA MADAGASCAR</h3>
+                <p>Built Symfony internal tools and automated reporting workflows.</p>
               </div>
-            </div>
-
+            </article>
           </div>
         </div>
       </div>
@@ -241,7 +226,8 @@
           <article class="card">
             <h3>Face.AI</h3>
             <p class="meta">Node.js, React, TensorFlow</p>
-            <a href="https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing" target="_blank" rel="noreferrer">Watch demo</a>
+            <a href="https://drive.google.com/file/d/1uob68DoOE1ZfCkWPGGFHFG3EGF24wZ6D/view?usp=sharing" target="_blank"
+              rel="noreferrer">Watch demo</a>
           </article>
           <article class="card">
             <h3>Geniusis</h3>
@@ -263,7 +249,7 @@
             <p>Software Engineering & Databases · High Honors</p>
           </div>
         </div>
-        
+
         <!-- You can add tech skills here later -->
       </div>
     </section>

@@ -23,21 +23,33 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((el) => revealObserver.observe(el));
 
-// --- Active Nav Observer ---
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          const isActive = link.getAttribute("href") === `#${entry.target.id}`;
-          link.classList.toggle("active", isActive);
-        });
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -45% 0px", threshold: 0.1 }
-);
-sections.forEach((s) => sectionObserver.observe(s));
+// --- Active Nav via viewport marker ---
+function setActiveNav(sectionId) {
+  navLinks.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("active", isActive);
+  });
+}
+
+function updateActiveNavByScroll() {
+  if (!sections.length) return;
+
+  const markerY = window.scrollY + (window.innerHeight * 0.35);
+  let activeSectionId = sections[0].id;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    if (markerY >= top && markerY < bottom) {
+      activeSectionId = section.id;
+    }
+  });
+
+  setActiveNav(activeSectionId);
+}
+
+window.addEventListener("scroll", updateActiveNavByScroll, { passive: true });
+window.addEventListener("resize", updateActiveNavByScroll);
 
 // --- Avatar Scroll Animation ---
 const avatar = document.getElementById("main-avatar");
@@ -54,7 +66,8 @@ function handleAvatarScroll() {
   
   // Locations
   const aboutTitle = document.querySelector("#about h2");
-  const worksTitle = document.querySelector("#experience h2");
+  const worksTitle = document.querySelector("#works h2");
+  if (!aboutTitle || !worksTitle) return;
   
   const aboutTargetTop = avatarTarget.getBoundingClientRect().top + scrollY;
   const worksTargetTop = worksTarget.getBoundingClientRect().top + scrollY;
@@ -223,54 +236,51 @@ tabBtns.forEach((btn) => {
     tabContents.forEach((content) => {
       content.classList.toggle("active", content.id === `${targetTab}-content`);
     });
+
+    if (targetTab === "professional") {
+      observeRoadmapItems();
+    }
   });
 });
 
-// --- Timeline Horizontal Drag ---
-const slider = document.querySelector(".timeline-wrapper");
-if (slider) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+// --- Roadmap reveal on page scroll ---
+let roadmapObserver;
 
-  slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slider.classList.add("active");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider.addEventListener("mouseleave", () => {
-    isDown = false;
-  });
-  slider.addEventListener("mouseup", () => {
-    isDown = false;
-  });
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-  });
+function observeRoadmapItems() {
+  const roadmapItems = Array.from(
+    document.querySelectorAll(".roadmap-item, .mountain-milestone, .podium-step, .stair-milestone, .target-item, .target-center, .branch-item, .branch-hub, .zigzag-milestone")
+  );
+  if (!roadmapItems.length) return;
 
-  // Nav Buttons Logic
-  const prevBtn = document.querySelector(".timeline-nav.prev");
-  const nextBtn = document.querySelector(".timeline-nav.next");
-  
-  if (prevBtn && nextBtn) {
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: -600, behavior: 'smooth' });
-    });
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: 600, behavior: 'smooth' });
-    });
+  if (roadmapObserver) {
+    roadmapObserver.disconnect();
   }
+
+  roadmapObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          roadmapObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  roadmapItems.forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index * 60, 320)}ms`;
+    roadmapObserver.observe(item);
+  });
 }
 
-
-
 // Run once on load
-window.addEventListener("load", handleAvatarScroll);
+window.addEventListener("load", () => {
+  handleAvatarScroll();
+  observeRoadmapItems();
+  updateActiveNavByScroll();
+});
 handleAvatarScroll();
+updateActiveNavByScroll();
 
 
