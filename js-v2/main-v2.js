@@ -47,22 +47,22 @@ const revealObserver = new IntersectionObserver(
 
       // Handle works header visibility when skills section is near
       if (entry.target.id === "projects") {
-        const worksHeader = document.querySelector(".works-sticky-wrapper");
-        if (worksHeader) {
+        const worksWrappers = document.querySelectorAll(".works-sticky-wrapper, .works-tabs-sticky-wrapper");
+        worksWrappers.forEach(wrapper => {
           if (entry.isIntersecting) {
-            worksHeader.style.opacity = "0";
-            worksHeader.style.visibility = "hidden";
-            worksHeader.style.pointerEvents = "none";
+            wrapper.style.opacity = "0";
+            wrapper.style.visibility = "hidden";
+            wrapper.style.pointerEvents = "none";
           } else {
             // Only show it if we are above the skills section
             const rect = entry.target.getBoundingClientRect();
             if (rect.top > 0) {
-              worksHeader.style.opacity = "1";
-              worksHeader.style.visibility = "visible";
-              worksHeader.style.pointerEvents = "auto";
+              wrapper.style.opacity = "1";
+              wrapper.style.visibility = "visible";
+              wrapper.style.pointerEvents = "auto";
             }
           }
-        }
+        });
       }
     });
   },

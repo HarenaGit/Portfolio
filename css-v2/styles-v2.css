@@ -435,16 +435,31 @@ h1 {
   transition: opacity 0.5s ease, visibility 0.5s ease;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   padding: 0 3vw;
-  /* Extreme edges */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  pointer-events: none;
+}
+
+.works-tabs-sticky-wrapper {
+  position: sticky;
+  top: 100px;
+  height: 0;
+  z-index: 501;
+  /* Slightly higher to ensure tabs are on top if they overlap */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 3vw;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   pointer-events: none;
 }
 
 
-.works-sticky-wrapper>* {
+.works-sticky-wrapper>*,
+.works-tabs-sticky-wrapper>* {
   pointer-events: auto;
 }
 
@@ -505,34 +520,47 @@ h1 {
 .works-tabs {
   margin-left: auto;
   display: flex;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.3rem;
-  border-radius: 100px;
-  border: 1px solid rgba(112, 128, 255, 0.2);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.35rem;
+  border-radius: 12px;
+  border: 1px solid rgba(112, 128, 255, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(112, 128, 255, 0.05);
+  gap: 0.35rem;
+  pointer-events: auto;
 }
 
 .tab-btn {
   background: transparent;
   border: none;
   color: var(--muted);
-  padding: 0.6rem 1.8rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   font-family: inherit;
   cursor: pointer;
-  border-radius: 100px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tab-btn:hover {
   color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .tab-btn.active {
-  background: var(--accent-2);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
-  box-shadow: 0 4px 15px rgba(112, 128, 255, 0.4);
+  box-shadow:
+    0 8px 20px rgba(112, 128, 255, 0.3),
+    0 0 12px rgba(89, 185, 255, 0.2);
 }
 
 
@@ -665,6 +693,34 @@ h1 {
   .nav-links,
   .download-cv-btn {
     justify-self: center;
+  }
+
+  .works-sticky-wrapper,
+  .works-tabs-sticky-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: auto;
+    top: 80px;
+    padding: 0.5rem;
+    position: sticky;
+  }
+
+  .works-tabs-sticky-wrapper {
+    top: 140px;
+    /* Offset on mobile to stack */
+  }
+
+  .works-tabs {
+    margin-left: 0;
+    width: fit-content;
+  }
+
+  .tab-btn {
+    writing-mode: horizontal-tb;
+    height: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
   }
 
   .hero-section {
@@ -1636,17 +1692,13 @@ h1 {
 .works-tabs {
   margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: stretch;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .tab-btn {
   padding: 0.65rem 0.8rem;
   font-size: 0.74rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  min-height: 72px;
   min-width: 42px;
 }
 
@@ -1843,7 +1895,6 @@ h1 {
   }
 
   .tab-btn {
-    writing-mode: horizontal-tb;
     min-height: auto;
     min-width: auto;
   }
