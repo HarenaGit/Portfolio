@@ -43,7 +43,37 @@ The system includes a **Global Loading Screen** that ensures all data is fully l
 
 ## 🚀 Portfolio link
 
-[https://harenagit.github.io/Portfolio/](https://harenagit.github.io/Portfolio/)
+## 🛠️ Technical Implementation: JSON Data Loading
+
+The portfolio uses an asynchronous, data-driven approach to populate content:
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant JS as main-v2.js
+    participant JSON as PortfolioData.json
+    participant D as DOM Elements
+
+    B->>JS: DOMContentLoaded
+    JS->>B: Show Global Loader
+    JS->>JSON: fetch('PortfolioData.json')
+    alt Success
+        JSON-->>JS: Return JSON Data
+        JS->>D: applyPortfolioData()
+        Note over JS,D: Map IDs to JSON values
+        JS->>B: hideLoader()
+        B->>B: Reveal Content (Fade Out)
+    else Failure
+        JSON-->>JS: Error (404/CORS)
+        JS->>B: hideLoader() (Fallback)
+        Note over B: Show static elements
+    end
+```
+
+1.  **Asynchronous Fetching**: Upon page load, a `fetch()` request is sent to retrieve `PortfolioData.json`. This is wrapped in an `async/await` function to handle the asynchronous nature of network requests.
+2.  **Dynamic DOM Population**: A helper function `setElText(id, text)` safely updates the `textContent` of elements only if they exist in the DOM, preventing script errors.
+3.  **Loading Orchestration**: The **Global Loader** is synchronized with the data fetching process. It remains visible until the JSON is successfully parsed and the DOM is fully populated.
+4.  **Error Handling**: The implementation includes robust error boundaries. If the fetch fails (e.g., due to a 404 or CORS issue), the loader still hides to allow the user to see the site, and detailed debug information is logged to the console.
 
 ---
 *Created with ❤️ Ny Harena *
