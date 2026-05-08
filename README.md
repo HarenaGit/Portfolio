@@ -51,6 +51,8 @@ The system includes a **Global Loading Screen** that ensures all data is fully l
 
 ## 🚀 Portfolio link
 
+[https://harenagit.github.io/Portfolio/](https://harenagit.github.io/Portfolio/)
+
 ## 🛠️ Technical Implementation: JSON Data Loading
 
 The portfolio uses an asynchronous, data-driven approach to populate content:
