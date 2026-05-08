@@ -42,4 +42,4 @@ All text content is externalized to ensure the portfolio is easy to update witho
 The system includes a **Global Loading Screen** that ensures all data is fully loaded and applied before revealing the page to the user, providing a professional and seamless experience.
 
 ---
-*Created with ❤️ by Antigravity*
+*Created with ❤️ Ny Harena *
