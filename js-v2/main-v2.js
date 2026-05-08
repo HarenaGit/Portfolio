@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll(".nav-links a");
 
 // --- Reveal Observer ---
 let typewriterStarted = false;
+let contactTimeout;
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -14,6 +15,33 @@ const revealObserver = new IntersectionObserver(
         if (entry.target.id === "about" && !typewriterStarted) {
           typewriterStarted = true;
           startAboutTypewriter();
+        }
+
+        // Trigger contact animations
+        if (entry.target.id === "contact") {
+          const mapSvg = entry.target.querySelector(".map-svg");
+          const pinCard = entry.target.querySelector(".pin-info-card");
+          if (mapSvg) {
+            mapSvg.classList.add("is-revealed");
+            clearTimeout(contactTimeout);
+            contactTimeout = setTimeout(() => {
+              mapSvg.classList.add("is-breathing");
+              if (pinCard) pinCard.classList.add("is-active");
+            }, 800);
+          }
+        }
+      } else {
+        // Reset contact animations when leaving viewport
+        if (entry.target.id === "contact") {
+          const mapSvg = entry.target.querySelector(".map-svg");
+          const pinCard = entry.target.querySelector(".pin-info-card");
+          clearTimeout(contactTimeout);
+          if (mapSvg) {
+            mapSvg.classList.remove("is-revealed", "is-breathing");
+          }
+          if (pinCard) {
+            pinCard.classList.remove("is-active");
+          }
         }
       }
 
