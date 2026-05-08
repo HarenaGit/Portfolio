@@ -3366,3 +3366,66 @@ h1 {
     gap: 1.5rem;
   }
 }
+
+/* Career Separator */
+.career-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 6rem 0 2rem;
+  width: 100%;
+}
+
+.separator-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+  opacity: 0.3;
+}
+
+.separator-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.career-separator:hover .separator-icon {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+  transform: scale(1.1);
+}
+
+.asecna-graph {
+  min-height: 600px;
+}
+
+.asecna-circle {
+  background: linear-gradient(135deg, #003399, #0066cc) !important;
+  box-shadow: 0 0 40px rgba(0, 102, 204, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.four-branches {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 1100px) {
+  .four-branches {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .four-branches {
+    grid-template-columns: 1fr !important;
+  }
+}
