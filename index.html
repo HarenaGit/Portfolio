@@ -139,81 +139,93 @@
           </div>
         </div>
       </div>
+
+
       <div id="professional-content" class="tab-content active">
-        <div class="timeline-wrapper">
-          <div class="zigzag-roadmap" aria-label="Professional zigzag roadmap">
-            <svg class="zigzag-road-core" viewBox="0 0 900 1200" preserveAspectRatio="none" aria-hidden="true">
-              <path class="road-base" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
-              <path class="road-edge" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
-              <path class="road-centerline" d="M460 40 C590 145 580 245 470 340 C330 465 360 575 520 685 C670 790 640 905 500 1010 C410 1075 395 1135 475 1180" />
-            </svg>
+        <div class="career-graph" aria-label="Professional career graph">
+          <svg class="graph-connectors" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMin meet">
+            <!-- Top to Center -->
+            <path class="connector-line" d="M500 80 L500 130" />
+            <circle class="connector-dot" cx="500" cy="80" r="4" />
+            <circle class="connector-dot" cx="500" cy="130" r="4" />
 
-            <article class="zigzag-milestone left reveal-on-scroll">
-              <span class="zigzag-dot">NOW</span>
-              <div class="zigzag-content">
-                <h3>ETECH CONSULTING</h3>
-                <p>Microservices architecture leadership with Spring Boot.</p>
-              </div>
-            </article>
+            <!-- Center to Branches (Aligned to 16.6%, 50%, 83.3%) -->
+            <path class="connector-line" d="M500 270 L500 350 Q500 380 470 380 L196 380 Q166 380 166 410 L166 480" />
+            <path class="connector-line" d="M500 270 L500 480" />
+            <path class="connector-line" d="M500 270 L500 350 Q500 380 530 380 L803 380 Q833 380 833 410 L833 480" />
+            
+            <circle class="connector-dot" cx="500" cy="270" r="4" />
+            <circle class="connector-dot" cx="166" cy="480" r="4" />
+            <circle class="connector-dot" cx="500" cy="480" r="4" />
+            <circle class="connector-dot" cx="833" cy="480" r="4" />
+          </svg>
 
-            <article class="zigzag-milestone right reveal-on-scroll">
-              <span class="zigzag-dot">2025</span>
-              <div class="zigzag-content">
-                <h3>ETECH CONSULTING</h3>
-                <p>Realtime mapping innovations with advanced React and cloud APIs.</p>
-              </div>
-            </article>
+          <div class="graph-top reveal">
+            <div class="pill">
+              <span class="pill-label">Your cloud service</span>
+              <span class="pill-date">2022 - Now</span>
+            </div>
+          </div>
 
-            <article class="zigzag-milestone left reveal-on-scroll">
-              <span class="zigzag-dot">2024</span>
-              <div class="zigzag-content">
-                <h3>ETECH CONSULTING</h3>
-                <p>Managed GCP services and reliability at enterprise scale.</p>
-              </div>
-            </article>
+          <div class="graph-center reveal">
+            <div class="circle">
+              <span class="circle-text">Etech</span>
+            </div>
+          </div>
 
-            <article class="zigzag-milestone right reveal-on-scroll">
-              <span class="zigzag-dot">2023</span>
-              <div class="zigzag-content">
-                <h3>ETECH CONSULTING</h3>
-                <p>Drove code quality, reviews, and engineering mentorship.</p>
-              </div>
-            </article>
+          <div class="graph-branches">
+            <div class="branch-column">
+              <article class="branch-card reveal" id="branch-architecture">
+                <div class="card-port"></div>
+                <div class="branch-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div class="branch-content">
+                  <h4>Architecture & Leadership</h4>
+                  <p>Microservices architecture leadership with Spring Boot and engineering mentorship.</p>
+                </div>
+              </article>
+              <span class="branch-label">Platform</span>
+            </div>
 
-            <article class="zigzag-milestone left reveal-on-scroll">
-              <span class="zigzag-dot">2022</span>
-              <div class="zigzag-content">
-                <h3>ETECH CONSULTING</h3>
-                <p>Migrated monolith frontend to modular micro-frontends.</p>
-              </div>
-            </article>
+            <div class="branch-column">
+              <article class="branch-card reveal" id="branch-product">
+                <div class="card-port"></div>
+                <div class="branch-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <div class="branch-content">
+                  <h4>Product & Innovation</h4>
+                  <p>Realtime mapping innovations with advanced React and modular micro-frontends.</p>
+                </div>
+              </article>
+              <span class="branch-label">Frontend</span>
+            </div>
 
-            <article class="zigzag-milestone right reveal-on-scroll">
-              <span class="zigzag-dot">2021</span>
-              <div class="zigzag-content">
-                <h3>ASECNA MADAGASCAR</h3>
-                <p>PostgreSQL sync optimization and major data performance gains.</p>
-              </div>
-            </article>
-
-            <article class="zigzag-milestone left reveal-on-scroll">
-              <span class="zigzag-dot">2020</span>
-              <div class="zigzag-content">
-                <h3>ASECNA MADAGASCAR</h3>
-                <p>Launched cross-platform equipment tracking with React Native.</p>
-              </div>
-            </article>
-
-            <article class="zigzag-milestone right reveal-on-scroll">
-              <span class="zigzag-dot">2019</span>
-              <div class="zigzag-content">
-                <h3>ASECNA MADAGASCAR</h3>
-                <p>Built Symfony internal tools and automated reporting workflows.</p>
-              </div>
-            </article>
+            <div class="branch-column">
+              <article class="branch-card reveal" id="branch-cloud">
+                <div class="card-port"></div>
+                <div class="branch-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.5 19c3.037 0 5.5-2.463 5.5-5.5 0-2.316-1.424-4.3-3.454-5.116C19.034 5.314 16.273 3 13 3c-3.03 0-5.617 2.022-6.502 4.811C4.015 8.164 2 10.34 2 13c0 3.314 2.686 6 6 6h9.5z"/>
+                  </svg>
+                </div>
+                <div class="branch-content">
+                  <h4>Cloud & Infrastructure</h4>
+                  <p>Managed GCP services and reliability at enterprise scale.</p>
+                </div>
+              </article>
+              <span class="branch-label">DevOps</span>
+            </div>
           </div>
         </div>
       </div>
+
+
 
 
       <div id="personal-content" class="tab-content">
@@ -254,18 +266,77 @@
       </div>
     </section>
 
+
     <section class="section reveal" id="contact">
-      <h2>Contact</h2>
-      <div class="contact-list">
-        <p><strong>Phone:</strong> +261 34 98 822 91</p>
-        <p><strong>Email:</strong> nyharena.access5@gmail.com</p>
-        <p><strong>Address:</strong> IPS 65 Ambanilala Itaosy, Antananarivo, Madagascar</p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/HarenaGit" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://stackoverflow.com/users/12769257/ny-harena-fitahiantsoa-raherim" target="_blank"
-          rel="noreferrer">StackOverflow</a>
-        <a href="https://web.facebook.com/profile.php?id=100009279701344" target="_blank" rel="noreferrer">Facebook</a>
+      <div class="contact-container">
+        <header class="contact-header">
+          <h2>My Global Presence</h2>
+          <p>Available for remote collaborations across all time zones.</p>
+        </header>
+
+        <div class="contact-stats">
+          <div class="stat-item">
+            <span class="stat-value">5+</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">12+</span>
+            <span class="stat-label">Cloud Services Mastered</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">24/7</span>
+            <span class="stat-label">Support Availability</span>
+          </div>
+        </div>
+
+
+
+
+        <div class="map-wrapper">
+          <div class="map-globe">
+            <div class="map-content">
+              <img src="images/map/map-dotted.svg" alt="Global Presence Map" class="map-svg">
+              
+              <!-- Madagascar Pin -->
+              <div class="map-pin pin-madagascar" id="pin-mg">
+                <div class="pin-ring"></div>
+                <div class="pin-dot"></div>
+                <div class="pin-info-card">
+                  <h3>Antananarivo, Madagascar</h3>
+                  <ul>
+                    <li><strong>Status:</strong> Active & Remote Ready</li>
+                    <li><strong>Local Time:</strong> UTC+3</li>
+                    <li><strong>Base:</strong> Itaosy, Antananarivo</li>
+                    <li><strong>Availability:</strong> Full-time</li>
+                  </ul>
+                  <a href="mailto:nyharena.access5@gmail.com" class="contact-mini-btn">Get in touch</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-footer">
+          <div class="contact-info-list">
+            <a href="tel:+261349882291" class="footer-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +261 34 98 822 91
+            </a>
+            <a href="mailto:nyharena.access5@gmail.com" class="footer-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              nyharena.access5@gmail.com
+            </a>
+          </div>
+          <div class="social-links-v2">
+            <a href="https://github.com/HarenaGit" target="_blank" class="social-icon">GH</a>
+            <a href="https://stackoverflow.com/users/12769257/ny-harena-fitahiantsoa-raherim" target="_blank" class="social-icon">SO</a>
+            <a href="https://web.facebook.com/profile.php?id=100009279701344" target="_blank" class="social-icon">FB</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -248,7 +248,7 @@ let roadmapObserver;
 
 function observeRoadmapItems() {
   const roadmapItems = Array.from(
-    document.querySelectorAll(".roadmap-item, .mountain-milestone, .podium-step, .stair-milestone, .target-item, .target-center, .branch-item, .branch-hub, .zigzag-milestone")
+    document.querySelectorAll(".roadmap-item, .mountain-milestone, .podium-step, .stair-milestone, .target-item, .target-center, .branch-item, .branch-hub, .zigzag-milestone, .branch-card")
   );
   if (!roadmapItems.length) return;
 
