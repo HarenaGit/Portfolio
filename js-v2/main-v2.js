@@ -314,12 +314,12 @@ function observeRoadmapItems() {
         }
       });
     },
-    { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.05, rootMargin: "0px 0px -2% 0px" }
   );
 
   roadmapItems.forEach((item, index) => {
     item.classList.remove("is-visible");
-    item.style.transitionDelay = `${index * 100}ms`;
+    item.style.transitionDelay = `${(index % 4) * 40}ms`;
     roadmapObserver.observe(item);
   });
 }
